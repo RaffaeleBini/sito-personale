@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bodycontainer {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.headercontainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.hero {
+  background-image: url("../img/intro-bg.jpg");
+  background-color: #F2A30F;
+  opacity: 0.8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+.top {
+  width:100%;
+  height:40px;
+  display:flex;
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+.top-decorations {
+  background-image: url("../img/top-bg.jpeg");
+  background:#F2F0CE;
+  background-position: top;
+  background-repeat: repeat-x;
+  /*background-size: cover; */
+  z-index:100;
+}
+
+.lang-button {
+  background-color: #F2A30F; /*come navbar */
+  border: none;
+  color: #F2F0CE;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0px 4px;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.introcontainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.introcontainer h1 {
+  font-family: 'Roboto', sans-serif;
+  color:#F2F0CE; 
+  font-size: 60px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.introcontainer h2 {
+  font-family: 'Roboto', sans-serif;
+  color:#F2F0CE; 
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 1.2;
+} 
+
+.introcontainerscroll {
+  height: 60px;
+} 
+
+.titolo {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.linea {
+  width:30vh;
+  height:3px;
+  display: flex;
+  background:#F2F0CE;
+  justify-content: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  border: 1px solid black;
+  background-color: #F2A30F;
+  display: flex;
+  /*position: fixed;*/
+  align-items: center;
+  justify-content: center;
+}
+
+.menulist {
+  list-style: none;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-right: 0px;
+  margin-top: 0px;
+  border: 1px solid black;
+}
+
+.menuelement {
+  list-style: none;
+  display: inline block;
+  /*margin-right: 5vh;*/
+  font-size: 28 px;
+  border: 1px solid black;
+}
+
+.menuelement a:link, a:visited {
+  font-family: "Roboto", sans-serif;
+  color: #F2F0CE;
+  text-decoration: none;
+  padding: 0 2vh;
+  }
+
+.menuelement a:hover, a:active {
+  color: #F2F0CE;
+  font-weight: bolder;
+  text-transform: uppercase;
+  }
+
+.sectioncontainer {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  /*flex-wrap: nowrap;*/
+  justify-content: center;
+  align-items: center;
+  /*overflow: hidden;*/
+}
+
+.sectioncontainer p {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.sectioncontainer h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.sectioncontainer h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.sudime {
+  margin-top: 5vh;
+  padding: 0 25vh;
+  background-color: white;
+  height: 90vh;
+  border: 1px solid black;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.sudimecolonna {
+  flex: 1 1 0%;
+  margin: 0 2vh;
+  border: 1px solid black;
+}
+
+.sudime-img {
+  border-radius: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  max-height: auto;
+}
+
+.chisono {
+  margin-top: 5vh;
+  padding: 0 25vh;
+  background-color: #F2F0CE;
+  height: 90vh;
+  border: 1px solid black;
+}
+
+.cosafaccio {
+  margin-top: 5vh;
+  padding: 0 15vh;
+  background-color: white;
+  height: 90vh;
+  border: 1px solid black;
+}
+
+.contatti {
+  margin-top: 5vh;
+  padding: 0 15vh;
+  background-color: #F2F0CE;
+  /*height: 40vh;*/
+  border: 1px solid black;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: light-grey;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #F8E028;
+}
+
+/* Imposto le regole di responsive design */
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: #F09A9D; /* Red */
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: #F5CF8E; /* Yellow */
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: white; /* White */
+  }
+}

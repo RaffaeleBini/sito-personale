@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <meta name="description" content="Raffaele Bini Personal Page and Portfolio">
+    <meta name="keywords" content="HTML, CSS, Blog, Portfolio">
+    <meta name="author" content="Raffaele Bini">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffaele Bini</title>
+    <meta name="og:title" content="Raffaele Bini">
+    <link rel="alternate" href="/" hreflang="it" />
+    <link rel="alternate" href="/en/" hreflang="en" />
+    <link rel="alternate" href="/es/" hreflang="es" />
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(window).scroll(function(){
+       var scroll = $(window).scrollTop();
+       if (scroll > 0){
+       $("#intro").addClass(".introcontainerscroll");
+       $("#intro").removeClass(".introcontainerscreen");
+       }else{
+       $("#intro").removeClass(".introcontainerscroll");
+      }
+      })
+    </script>-->
+  </head>
+
+  <body>
+  <!--Creo un contenitore per l'intera struttura del corpo della pagina, che uso per gestire le sezioni con flexbox-->
+  <div id="bodycontainer" class="bodycontainer">
+
+  <!--Header: dispongo 3 sezioni: una striscia top, un riquadro per il titolo introduttivo e una barra di navigazione-->
+  <header> 
+  <!--Trasformo l'header in un contenitore per flexbox-->
+  <div id="headercontainer" class="headercontainer hero">
+    <div id="top" class="top top-decorations">
+      <button class="lang-button" a href="https://www.kaiwa-projects.com/ko/">English</a></button>
+      <button class="lang-button" a href="https://www.kaiwa-projects.com/ko/">Español</a></button>
+    </div>
+    <!--Creo un sottocontainer per strutturare il titolo e l'intestazione-->  
+    <div id="intro" class="introcontainer">
+      <div id="titolo" class="titolo">
+        <h1>RAFFAELE BINI</h1>
+      </div>
+      <div id="linea" class="linea"></div>
+      <div id="didascalia" class="titolo">
+        <h2>Ingegnere Creativo e Pensatore Indipendente</h2>
+      </div>
+    </div>
+    <!-- Menu di navigazione -->
+    <nav class="navbar">
+      <ul class="menulist">   
+        <li class="menuelement"><a href=#home>Home</a></li>
+        <li class="menuelement"><a href=#sudime>Su di me</a></li>
+        <li class="menuelement"><a href=#cosafaccio>Cosa Faccio</a></li>
+        <li class="menuelement"><a href="#">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>  
+  </header>
+  <!--Header end-->
+  
+  
+
+  <!--Home-->
+  <section id="sudime" class="sectioncontainer sudime">
+      <div class="sudimecolonna">
+      <img class="sudime-img" src="./assets/img/foto.jpg">
+    </div>
+    <div class="sudimecolonna">
+      <p>Pensatore Indipendente ed Ingegnere Creativo, instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società. Agente del Cambiamento volto alla ricerca continua dell"Eccellenza, generata da Lavoro e Relazioni significative.</p>
+      <br>
+      <p>Nel mio percorso professionale ho avuto l’opportunità di lavorare in luoghi ed ambiti diversi: grazie a queste esperienze ed ai colleghi che mi hanno aiutato a crescere, ho imparato che il segreto per raggiungere qualsiasi risultato è investire nel benessere e nella crescita delle Persone e creare un Ambiente di Lavoro che generi la passione per la propria mansione.</p>
+    </div>
+    <div class="sudimecolonna">
+      <h1>Raffaele  Bini</h1> <!--DA FARE CSS per mettere il nome come intestazione a tutta pagina con la foto accanto-->
+      <h2>Pensatore Indipendente e Ingegnere Creativo</h2>
+    </div>
+  </section>
+  <!--Home End-->
+
+  <!--Chi Sono-->
+  <section id="chisono" class="sectioncontainer chisono">
+    <h1>Su di Me</h1>
+    <p>Pensatore Indipendente ed Ingegnere Creativo, instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società.
+    Agente del Cambiamento volto alla ricerca continua dell"Eccellenza, generata da Lavoro e Relazioni significative.</p>
+    <button>Scopri di più</button>
+  </section>
+  <!--Fine Chi Sono-->
+
+  <!--Cosa Faccio-->
+  <section id="cosafaccio" class="sectioncontainer cosafaccio">
+    <h1>Cosa Faccio</h1>
+    <p>Coltivo Sogni ed uso la Bellezza per trasformarli in Realtà e contribuire alla Transizione Ecologica ed a quella Digitale</p>
+    <button>Portfolio</button>
+  </section>
+  <!--Fine Cosa Faccio-->
+
+  <!--Contatti-->
+  <section id="contatti" class="sectioncontainer contatti">
+    <form action="" method="get">
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="nome" name="nome" value="Nome e Cognome"><br>
+      <label for="email">Indirizzo e-mail:</label><br>
+      <input type="email" id="email" name="email" placeholder="raffaele@esempio.it"><br>
+      <label for="messaggio">Messaggio:</label><br>
+      <textarea name="messaggio" style="width:300px; height:200px;">Scrivi qui il tuo messaggio.</textarea><br>
+      <button>Submit</button>
+</form>
+  </section>
+  <!--Fine Contatti-->
+
+  </div>
+
+  <!--Footer-->
+  <footer>           <!-- This, too -->
+    <p>&copy; 2021 raffaelebini.com</p>
+  </footer>
+  <!--Footer End-->
+  </body>
+</html>
