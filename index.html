@@ -15,18 +15,24 @@
     <link rel="alternate" href="/en/" hreflang="en" />
     <link rel="alternate" href="/es/" hreflang="es" />
     <link rel="stylesheet" href="./assets/css/style.css"/>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script>
        $(window).scroll(function(){
        var scroll = $(window).scrollTop();
        if (scroll > 0){
-       $("#intro").addClass(".introcontainerscroll");
-       $("#intro").removeClass(".introcontainerscreen");
+       $("#intro").addClass(".intro-scroll");
        }else{
-       $("#intro").removeClass(".introcontainerscroll");
+       $("#intro").removeClass(".intro-scroll");
       }
       })
-    </script>-->
+    </script>
+    <script>
+      $(function() {
+        $.scrollify({
+          section : ".example-classname",
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -52,11 +58,11 @@
       </div>
     </div>
     <!-- Menu di navigazione -->
-    <nav class="navbar">
+    <nav id="navbar" class="navbar">
       <ul class="menulist">   
-        <li class="menuelement"><a href=#home>Home</a></li>
         <li class="menuelement"><a href=#sudime>Su di me</a></li>
         <li class="menuelement"><a href=#cosafaccio>Cosa Faccio</a></li>
+        <li class="menuelement"><a href=#cosasofare>Cosa So Fare</a></li>
         <li class="menuelement"><a href="#">Contatti</a></li>
       </ul>
     </nav>
@@ -69,6 +75,8 @@
   <!--Home-->
   <section id="sudime" class="sectioncontainer sudime">
       <div class="sudimecolonna">
+      <h1 style="text-align:center;">Su di Me</h1>
+      <br>
       <img class="sudime-img" src="./assets/img/foto.jpg">
     </div>
     <div class="sudimecolonna">
@@ -77,20 +85,21 @@
       <p>Nel mio percorso professionale ho avuto l’opportunità di lavorare in luoghi ed ambiti diversi: grazie a queste esperienze ed ai colleghi che mi hanno aiutato a crescere, ho imparato che il segreto per raggiungere qualsiasi risultato è investire nel benessere e nella crescita delle Persone e creare un Ambiente di Lavoro che generi la passione per la propria mansione.</p>
     </div>
     <div class="sudimecolonna">
-      <h1>Raffaele  Bini</h1> <!--DA FARE CSS per mettere il nome come intestazione a tutta pagina con la foto accanto-->
-      <h2>Pensatore Indipendente e Ingegnere Creativo</h2>
+      <p>Credo nell’Etica e nella Sostenibilità del lavoro ed i miei Principi Personali sono:</p>
+      <br>
+      <ul>
+        <li>✔️ Onestà, Autenticità ed Integrità</li> 
+        <li>✔️ Onestà, Autenticità ed Integrità</li>
+        <li>✔️ Trasparenza ed Apertura Mentale</li>
+        <li>✔️ Rispetto e Gentilezza</li>
+        <li>✔️ Gratitudine e Generosità</li>
+        <li>✔️ Positività ed Entusiasmo</li>
+      </ul>
+      <br>
+      <p>Quel che più mi motiva è coltivare Relazioni con le persone, confrontarmi con le sfide dei Cambiamenti e cercare continuamente opportunità per Imparare.</p>
     </div>
   </section>
   <!--Home End-->
-
-  <!--Chi Sono-->
-  <section id="chisono" class="sectioncontainer chisono">
-    <h1>Su di Me</h1>
-    <p>Pensatore Indipendente ed Ingegnere Creativo, instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società.
-    Agente del Cambiamento volto alla ricerca continua dell"Eccellenza, generata da Lavoro e Relazioni significative.</p>
-    <button>Scopri di più</button>
-  </section>
-  <!--Fine Chi Sono-->
 
   <!--Cosa Faccio-->
   <section id="cosafaccio" class="sectioncontainer cosafaccio">
@@ -99,6 +108,15 @@
     <button>Portfolio</button>
   </section>
   <!--Fine Cosa Faccio-->
+
+  <!--Cosa so fare-->
+  <section id="cosasofare" class="sectioncontainer cosasofare">
+    <h1>Cosa So Fare</h1>
+    <p>Pensatore Indipendente ed Ingegnere Creativo, instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società.
+    Agente del Cambiamento volto alla ricerca continua dell"Eccellenza, generata da Lavoro e Relazioni significative.</p>
+    <button>Scopri di più</button>
+  </section>
+  <!--Fine Cosa so fare-->
 
   <!--Contatti-->
   <section id="contatti" class="sectioncontainer contatti">
