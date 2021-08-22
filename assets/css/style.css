@@ -97,8 +97,9 @@
   line-height: 1.2;
 } 
 
-.introcontainerscroll {
-  height: 60px;
+.intro-scroll {
+  position: fixed;
+  top: 90vh;
 } 
 
 .titolo {
@@ -122,7 +123,6 @@
   border: 1px solid black;
   background-color: #F2A30F;
   display: flex;
-  /*position: fixed;*/
   align-items: center;
   justify-content: center;
 }
@@ -188,6 +188,13 @@
   line-height: 1.2;
 }
 
+.sectioncontainer ul, li {
+  list-style: none;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
 .sudime {
   margin-top: 5vh;
   padding: 0 25vh;
@@ -218,15 +225,15 @@
   max-height: auto;
 }
 
-.chisono {
+.cosafaccio {
   margin-top: 5vh;
-  padding: 0 25vh;
+  padding: 0 15vh;
   background-color: #F2F0CE;
   height: 90vh;
   border: 1px solid black;
 }
 
-.cosafaccio {
+.cosasofare {
   margin-top: 5vh;
   padding: 0 15vh;
   background-color: white;
