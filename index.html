@@ -16,20 +16,20 @@
     <link rel="alternate" href="/es/" hreflang="es" />
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script>
-       $(window).scroll(function(){
-       var scroll = $(window).scrollTop();
-       if (scroll > 0){
-       $("#intro").addClass(".intro-scroll");
-       }else{
-       $("#intro").removeClass(".intro-scroll");
-      }
-      })
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script>
+    <script>
+      $(window).scroll(function(){
+      var scroll = $(window).scrollTop();
+        if (scroll > 0){
+           $("#navbar").addClass("navbar-scrolled");}
+        else{
+           $("#navbar").removeClass("navbar-scrolled");}
+       })
     </script>
     <script>
       $(function() {
         $.scrollify({
-          section : ".example-classname",
+          section : ".sectioncontainer",
         });
       });
     </script>
@@ -39,16 +39,18 @@
   <!--Creo un contenitore per l'intera struttura del corpo della pagina, che uso per gestire le sezioni con flexbox-->
   <div id="bodycontainer" class="bodycontainer">
 
-  <!--Header: dispongo 3 sezioni: una striscia top, un riquadro per il titolo introduttivo e una barra di navigazione-->
-  <header> 
+  <!--Header: uso l'header per posizionare una striscia top con la selezione della lingua -->
   <!--Trasformo l'header in un contenitore per flexbox-->
-  <div id="headercontainer" class="headercontainer hero">
-    <div id="top" class="top top-decorations">
+  <header id="headercontainer" class="headercontainer">
+    <div id="top" class="top-decorations">
       <button class="lang-button" a href="#">English</a></button>
       <button class="lang-button" a href="#">Español</a></button>
     </div>
+  </header>
+
+  <!--Intro: creo un'intestazione per presentare la pagina all'apertura. -->
+  <section id="intro" class="introcontainer hero">
     <!--Creo un sottocontainer per strutturare il titolo e l'intestazione-->  
-    <div id="intro" class="introcontainer">
       <div id="titolo" class="titolo">
         <h1>RAFFAELE BINI</h1>
       </div>
@@ -56,23 +58,19 @@
       <div id="didascalia" class="titolo">
         <h2>Ingegnere Creativo e Pensatore Indipendente</h2>
       </div>
-    </div>
-    <!-- Menu di navigazione -->
-    <nav id="navbar" class="navbar">
-      <ul class="menulist">   
-        <li class="menuelement"><a href=#sudime>Su di me</a></li>
-        <li class="menuelement"><a href=#cosafaccio>Cosa Faccio</a></li>
-        <li class="menuelement"><a href=#cosasofare>Cosa So Fare</a></li>
-        <li class="menuelement"><a href="#">Contatti</a></li>
-      </ul>
-    </nav>
-  </div>  
-  </header>
-  <!--Header end-->
+  </section>
   
+  <!-- Menu di navigazione -->
+  <nav id="navbar" class="navbar">
+    <ul class="menulist">   
+      <li class="menuelement"><a href=#sudime>Su di me</a></li>
+      <li class="menuelement"><a href=#cosafaccio>Cosa Faccio</a></li>
+      <li class="menuelement"><a href=#cosasofare>Cosa So Fare</a></li>
+      <li class="menuelement"><a href=#contatti>Contatti</a></li>
+    </ul>
+  </nav>
   
-
-  <!--Home-->
+  <!--Su di me: pagina con descrizione personale-->
   <section id="sudime" class="sectioncontainer sudime">
       <div class="sudimecolonna">
       <h1 style="text-align:center;">Su di Me</h1>
@@ -99,9 +97,12 @@
       <p>Quel che più mi motiva è coltivare Relazioni con le persone, confrontarmi con le sfide dei Cambiamenti e cercare continuamente opportunità per Imparare.</p>
     </div>
   </section>
-  <!--Home End-->
+  <!--Fine Sudime-->
 
   <!--Cosa Faccio-->
+  <!--https://www.flexboxpatterns.com/side-bar-->
+  <!--metto un riquadro a sinistra con la sidebar: lavoro - tempo libero - cv -->
+  <!--metto un riquadro a destra dove far comparire i contenuti scelti con la sidebar-->
   <section id="cosafaccio" class="sectioncontainer cosafaccio">
     <h1>Cosa Faccio</h1>
     <p>Coltivo Sogni ed uso la Bellezza per trasformarli in Realtà e contribuire alla Transizione Ecologica ed a quella Digitale</p>
@@ -110,6 +111,7 @@
   <!--Fine Cosa Faccio-->
 
   <!--Cosa so fare-->
+  <!--metto una infografica con le skills, vedere homepage di Start2Impact -->
   <section id="cosasofare" class="sectioncontainer cosasofare">
     <h1>Cosa So Fare</h1>
     <p>Pensatore Indipendente ed Ingegnere Creativo, instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società.
