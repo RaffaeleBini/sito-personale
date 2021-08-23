@@ -15,49 +15,40 @@
 
 .headercontainer {
   width: 100%;
-  height: 100vh;
+  height: 40px;
   display: flex;
-  position: relative;
+  position: fixed;
+  top:0;
+  left:0;
   overflow: hidden;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  z-index:100;
   border: 1px solid black;
 }
 
-.hero {
-  background-image: url("../img/intro-bg.jpg");
-  background-color: #F2A30F;
-  opacity: 0.8;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} 
-
-.top {
+/*.top {
   width:100%;
   height:40px;
   display:flex;
-  position:fixed;
-  top:0;
-  left:0;
-}
+}*/
 
 .top-decorations {
+  width:100%;
+  height:40px;
   background-image: url("../img/top-bg.jpeg");
   background:#F2F0CE;
-  background-position: top;
   background-repeat: repeat-x;
   /*background-size: cover; */
-  z-index:100;
 }
 
 .lang-button {
   background-color: #F2A30F; /*come navbar */
   border: none;
   color: #F2F0CE;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -70,7 +61,7 @@
 
 .introcontainer {
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -97,9 +88,13 @@
   line-height: 1.2;
 } 
 
-.intro-scroll {
-  position: fixed;
-  top: 90vh;
+.hero {
+  background-image: url("../img/intro-bg.jpg");
+  background-color: #F2A30F;
+  opacity: 0.8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 } 
 
 .titolo {
@@ -126,6 +121,14 @@
   align-items: center;
   justify-content: center;
 }
+
+/*classe per fissare in alto la navbar*/
+.navbar-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 40px;
+  z-index: 100;
+} 
 
 .menulist {
   list-style: none;
