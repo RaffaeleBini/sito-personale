@@ -15,8 +15,17 @@
     <link rel="alternate" href="/en/" hreflang="en" />
     <link rel="alternate" href="/es/" hreflang="es" />
     <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/social-circles.min.css">
+    <link rel="stylesheet" href="./assets/css/social-circles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script>
+    <script>
+      $(function() {
+        $.scrollify({
+          section : ".scroll",
+        });
+      });
+    </script>
     <script>
       $(window).scroll(function(){
       var scroll = $(window).scrollTop();
@@ -26,13 +35,6 @@
            $("#navbar").removeClass("navbar-scrolled");}
        })
     </script>
-    <script>
-      $(function() {
-        $.scrollify({
-          section : ".sectioncontainer",
-        });
-      });
-    </script>
   </head>
 
   <body>
@@ -41,10 +43,13 @@
 
   <!--Header: uso l'header per posizionare una striscia top con la selezione della lingua -->
   <!--Trasformo l'header in un contenitore per flexbox-->
-  <header id="headercontainer" class="headercontainer">
+  <header id="headercontainer" class="headercontainer scroll">
     <div id="top" class="top-decorations">
-      <button class="lang-button" a href="#">English</a></button>
-      <button class="lang-button" a href="#">Español</a></button>
+      <ul class="langmenu">
+        <li class="langmenuelement"><a href="#">Italiano</a></li>
+        <li class="langmenuelement"><a href="#">English</a></li>
+        <li class="langmenuelement"><a href="#">Español</a></li>
+      </ul>
     </div>
   </header>
 
@@ -71,11 +76,21 @@
   </nav>
   
   <!--Su di me: pagina con descrizione personale-->
-  <section id="sudime" class="sectioncontainer sudime">
-      <div class="sudimecolonna">
-      <h1 style="text-align:center;">Su di Me</h1>
+  <section id="sudime" class="sectioncontainer sudime scroll">
+    <div class="sudimecolonna">
+      <div id="avatar" class="avatar">
       <br>
       <img class="sudime-img" src="./assets/img/foto.jpg">
+      <br>
+      <h2 style="text-align:center;">Raffaele Bini</h2>
+      <br>
+        <div id="socialmedia" class="socialmedia">
+        <a class="icon-facebook social-button color" href="https://www.facebook.com/raffaele.bini"></a>
+        <a class="icon-instagram social-button color" href="https://www.instagram.com/raffaeleb/"></a>
+        <a class="icon-linkedin social-button color" href="https://www.linkedin.com/in/raffaelebini/"></a>
+        <a class="icon-github social-button color" href="https://github.com/RaffaeleBini"></a>
+        </div>
+      </div>
     </div>
     <div class="sudimecolonna">
       <p>Pensatore Indipendente ed Ingegnere Creativo, instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società. Agente del Cambiamento volto alla ricerca continua dell"Eccellenza, generata da Lavoro e Relazioni significative.</p>
@@ -103,7 +118,7 @@
   <!--https://www.flexboxpatterns.com/side-bar-->
   <!--metto un riquadro a sinistra con la sidebar: lavoro - tempo libero - cv -->
   <!--metto un riquadro a destra dove far comparire i contenuti scelti con la sidebar-->
-  <section id="cosafaccio" class="sectioncontainer cosafaccio">
+  <section id="cosafaccio" class="sectioncontainer cosafaccio scroll">
     <h1>Cosa Faccio</h1>
     <p>Coltivo Sogni ed uso la Bellezza per trasformarli in Realtà e contribuire alla Transizione Ecologica ed a quella Digitale</p>
     <button>Portfolio</button>
@@ -112,7 +127,7 @@
 
   <!--Cosa so fare-->
   <!--metto una infografica con le skills, vedere homepage di Start2Impact -->
-  <section id="cosasofare" class="sectioncontainer cosasofare">
+  <section id="cosasofare" class="sectioncontainer cosasofare scroll">
     <h1>Cosa So Fare</h1>
     <p>Pensatore Indipendente ed Ingegnere Creativo, instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società.
     Agente del Cambiamento volto alla ricerca continua dell"Eccellenza, generata da Lavoro e Relazioni significative.</p>
@@ -121,7 +136,7 @@
   <!--Fine Cosa so fare-->
 
   <!--Contatti-->
-  <section id="contatti" class="sectioncontainer contatti">
+  <section id="contatti" class="sectioncontainer contatti scroll">
     <form action="" method="get">
       <label for="nome">Nome:</label><br>
       <input type="text" id="nome" name="nome" value="Nome e Cognome"><br>
