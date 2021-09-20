@@ -4,7 +4,8 @@
     <meta charset="UTF-8"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name="description" content="Raffaele Bini Personal Page and Portfolio">
     <meta name="keywords" content="HTML, CSS, Blog, Portfolio">
     <meta name="author" content="Raffaele Bini">
@@ -20,6 +21,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script>
     <script>
+      var i = 0;
+      var txt = 'RAFFAELE BINI';
+      var speed = 200;
+      
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("typewriter").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      </script>
+    <script>
       $(function() {
         $.scrollify({
           section : ".scroll",
@@ -27,6 +41,15 @@
       });
     </script>
     <script>
+      function classToggle() {
+      const navs = document.querySelectorAll('.navbar-items')
+      navs.forEach(nav => nav.classList.toggle('navbar__ToggleShow'));
+}
+
+document.querySelector('.Navbar__Link-toggle')
+  .addEventListener('click', classToggle);
+    </script>
+    <!--<script>
       $(window).scroll(function(){
       var scroll = $(window).scrollTop();
         if (scroll > 0){
@@ -34,110 +57,87 @@
         else{
            $("#navbar").removeClass("navbar-scrolled");}
        })
-    </script>
+    </script>-->
   </head>
 
-  <body>
+  <body onload="typeWriter()">
   <!--Creo un contenitore per l'intera struttura del corpo della pagina, che uso per gestire le sezioni con flexbox-->
   <div id="bodycontainer" class="bodycontainer">
 
-  <!--Header: uso l'header per posizionare una striscia top con la selezione della lingua -->
-  <!--Trasformo l'header in un contenitore per flexbox-->
-  <header id="headercontainer" class="headercontainer scroll">
-    <div id="top" class="top-decorations">
-      <ul class="langmenu">
-        <li class="langmenuelement"><a href="#">Italiano</a></li>
-        <li class="langmenuelement"><a href="#">English</a></li>
-        <li class="langmenuelement"><a href="#">Español</a></li>
-      </ul>
-    </div>
+  <!-- Menu di navigazione -->
+  <header id="header" class="header">
+    <nav id="navbar" class="navbar">
+      <div class="navbar-links navbar-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+        <ul class="navbar-items">
+        <!-- <ul class="nav-links"> -->     
+          <li class="navbar-links"><a href=#introcontainer class="is-active">Home</a></li>
+          <li class="navbar-links"><a href=#chisono>Chi sono</a></li>
+          <li class="navbar-links"><a href=#cosafaccio>Cosa faccio</a></li>
+          <li class="navbar-links"><a href=#contatti>Contatti</a></li>
+        </ul>
+    </nav>
   </header>
 
-  <!--Intro: creo un'intestazione per presentare la pagina all'apertura. -->
-  <section id="intro" class="introcontainer hero">
+  <!--Trasformo l'header in un contenitore per flexbox-->
+  <section id="introcontainer" class="introcontainer scroll">
     <!--Creo un sottocontainer per strutturare il titolo e l'intestazione-->  
       <div id="titolo" class="titolo">
-        <h1>RAFFAELE BINI</h1>
+        <h1 id="typewriter"></h1>
       </div>
       <div id="linea" class="linea"></div>
-      <div id="didascalia" class="titolo">
-        <h2>Ingegnere Creativo e Pensatore Indipendente</h2>
+    </section>
+  
+  <!--Chi sono: pagina con descrizione personale-->
+  <section id="chisono" class="sectioncontainer scroll">
+    <div class="chisonocolonnasx">
+      <div id="chisono-txt" class="chisono-txt">
+      <br>
+      <h2>Raffaele Bini</h2>
+      <br>
       </div>
-  </section>
-  
-  <!-- Menu di navigazione -->
-  <nav id="navbar" class="navbar">
-    <ul class="menulist">   
-      <li class="menuelement"><a href=#sudime>Su di me</a></li>
-      <li class="menuelement"><a href=#cosafaccio>Cosa Faccio</a></li>
-      <li class="menuelement"><a href=#cosasofare>Cosa So Fare</a></li>
-      <li class="menuelement"><a href=#contatti>Contatti</a></li>
-    </ul>
-  </nav>
-  
-  <!--Su di me: pagina con descrizione personale-->
-  <section id="sudime" class="sectioncontainer sudime scroll">
-    <div class="sudimecolonna">
-      <div id="avatar" class="avatar">
-      <br>
-      <img class="sudime-img" src="./assets/img/foto.jpg">
-      <br>
-      <h2 style="text-align:center;">Raffaele Bini</h2>
-      <br>
-        <div id="socialmedia" class="socialmedia">
-        <a class="icon-facebook social-button color" href="https://www.facebook.com/raffaele.bini"></a>
-        <a class="icon-instagram social-button color" href="https://www.instagram.com/raffaeleb/"></a>
-        <a class="icon-linkedin social-button color" href="https://www.linkedin.com/in/raffaelebini/"></a>
-        <a class="icon-github social-button color" href="https://github.com/RaffaeleBini"></a>
-        </div>
+      <div id="chisono-img" class="chisono-img">
+      <img class="chisono-img" src="./assets/img/foto.jpg">
       </div>
     </div>
-    <div class="sudimecolonna">
+    <div class="chisonocolonnadx">
+      <div id="timeline" class="timeline">
       <p>Pensatore Indipendente ed Ingegnere Creativo, instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società. Agente del Cambiamento volto alla ricerca continua dell"Eccellenza, generata da Lavoro e Relazioni significative.</p>
       <br>
       <p>Nel mio percorso professionale ho avuto l’opportunità di lavorare in luoghi ed ambiti diversi: grazie a queste esperienze ed ai colleghi che mi hanno aiutato a crescere, ho imparato che il segreto per raggiungere qualsiasi risultato è investire nel benessere e nella crescita delle Persone e creare un Ambiente di Lavoro che generi la passione per la propria mansione.</p>
     </div>
-    <div class="sudimecolonna">
-      <p>Credo nell’Etica e nella Sostenibilità del lavoro ed i miei Principi Personali sono:</p>
-      <br>
-      <ul>
-        <li>✔️ Onestà, Autenticità ed Integrità</li> 
-        <li>✔️ Onestà, Autenticità ed Integrità</li>
-        <li>✔️ Trasparenza ed Apertura Mentale</li>
-        <li>✔️ Rispetto e Gentilezza</li>
-        <li>✔️ Gratitudine e Generosità</li>
-        <li>✔️ Positività ed Entusiasmo</li>
-      </ul>
-      <br>
-      <p>Quel che più mi motiva è coltivare Relazioni con le persone, confrontarmi con le sfide dei Cambiamenti e cercare continuamente opportunità per Imparare.</p>
-    </div>
   </section>
-  <!--Fine Sudime-->
+  <!--Fine Chisono-->
 
   <!--Cosa Faccio-->
   <!--https://www.flexboxpatterns.com/side-bar-->
   <!--metto un riquadro a sinistra con la sidebar: lavoro - tempo libero - cv -->
   <!--metto un riquadro a destra dove far comparire i contenuti scelti con la sidebar-->
   <section id="cosafaccio" class="sectioncontainer cosafaccio scroll">
+    <div id="cosafaccio-txt" class="cosafaccio-txt">
     <h1>Cosa Faccio</h1>
     <p>Coltivo Sogni ed uso la Bellezza per trasformarli in Realtà e contribuire alla Transizione Ecologica ed a quella Digitale</p>
     <button>Portfolio</button>
+    </div>
+    <div id="skillsbox" class="skillsbox">
+     <p>SKILLS</p> 
+    </div>
   </section>
   <!--Fine Cosa Faccio-->
 
-  <!--Cosa so fare-->
-  <!--metto una infografica con le skills, vedere homepage di Start2Impact -->
-  <section id="cosasofare" class="sectioncontainer cosasofare scroll">
-    <h1>Cosa So Fare</h1>
-    <p>Pensatore Indipendente ed Ingegnere Creativo, instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società.
-    Agente del Cambiamento volto alla ricerca continua dell"Eccellenza, generata da Lavoro e Relazioni significative.</p>
-    <button>Scopri di più</button>
-  </section>
-  <!--Fine Cosa so fare-->
-
   <!--Contatti-->
   <section id="contatti" class="sectioncontainer contatti scroll">
-    <form action="" method="get">
+    <div class="contatticolonnasx">
+      <div id="contatti-txt" class="contatti-txt">
+        <p>CONTATTI</p>
+      </div>
+      <div id="contatti-social" class="contatti-social">
+        <p>SOCIAL</p>
+      </div>
+    </div>
+    <div class="contatticolonnadx">
+    <form id="form" action="" method="get">
       <label for="nome">Nome:</label><br>
       <input type="text" id="nome" name="nome" value="Nome e Cognome"><br>
       <label for="email">Indirizzo e-mail:</label><br>
@@ -145,7 +145,8 @@
       <label for="messaggio">Messaggio:</label><br>
       <textarea name="messaggio" style="width:300px; height:200px;">Scrivi qui il tuo messaggio.</textarea><br>
       <button>Submit</button>
-</form>
+    </form>
+    </div>
   </section>
   <!--Fine Contatti-->
 
