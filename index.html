@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="description" content="Raffaele Bini Personal Page and Portfolio">
     <meta name="keywords" content="HTML, CSS, Blog, Portfolio">
     <meta name="author" content="Raffaele Bini">
@@ -42,22 +42,13 @@
     </script>
     <script>
       function openNav() {
-        document.getElementById("navbar").style.height = "45px";
+        document.getElementById("navbar").style.height = "50px";
       }
       
       function closeNav() {
         document.getElementById("navbar").style.height = "0";
       }
     </script>
-    <!--<script>
-      $(window).scroll(function(){
-      var scroll = $(window).scrollTop();
-        if (scroll > 0){
-           $("#navbar").addClass("navbar-scrolled");}
-        else{
-           $("#navbar").removeClass("navbar-scrolled");}
-       })
-    </script>-->
   </head>
 
   <body onload="typeWriter()">
@@ -118,12 +109,36 @@
       </div>
     </div>
     <div class="chisonocolonnadx">
+      <div id="timeline-title" class="timeline-title">
+        <h2>Evoluzione Personale</h2>
+      </div>
       <div id="timeline" class="timeline">
-        <h2>Pensatore Indipendente ed Ingegnere Creativo</h2>
-        <br>
-        <p>instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società. Agente del Cambiamento volto alla ricerca continua dell"Eccellenza, generata da Lavoro e Relazioni significative.</p>
-        <br>
-        <p>Nel mio percorso professionale ho avuto l’opportunità di lavorare in luoghi ed ambiti diversi: grazie a queste esperienze ed ai colleghi che mi hanno aiutato a crescere, ho imparato che il segreto per raggiungere qualsiasi risultato è investire nel benessere e nella crescita delle Persone e creare un Ambiente di Lavoro che generi la passione per la propria mansione.</p>
+        <div class="timeline-item">
+          <!--Icon inside the circle-->
+          <div class="timeline-icon">
+            <img src="assets/images/2021.svg" width="25px" alt="">
+          </div>
+          <!-- Content from timeline box and position (right or left)-->
+          <div class="timeline-content">
+            <h2>2021 Fondamenti di Marketing Digitale</h2>
+            <p>
+              Rilasciato da Google Digital Training
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+            <!--Icon inside the circle-->
+            <div class="timeline-icon">
+              <img src="assets/images/star.svg" width="25px" alt="">
+            </div>
+            <!-- Content from timeline box and position (right or left)-->
+            <div class="timeline-content right">
+              <h2>2021 Cammino a Finisterre</h2>
+              <p>
+                A piedi fino alla fine del mondo
+              </p>
+            </div>
+        </div>
     </div>
   </section>
   <!--Fine Chisono-->
@@ -149,24 +164,35 @@
   <!--Fine Cosa Faccio-->
 
   <!--Contatti-->
-  <section id="contatti" class="sectioncontainer contatti scroll">
+  <section id="contatti" class="sectioncontainer scroll">
     <div class="contatticolonnasx">
-      <div id="contatti-txt" class="contatti-txt">
-        <p>CONTATTI</p>
-      </div>
-      <div id="contatti-social" class="contatti-social">
-        <p>SOCIAL</p>
+      <div id="contatti-card" class="contatti-card">
+        <div id="contatti-txt" class="contatti-txt">
+          <h1>CONTATTI</h1>
+          <br>
+          <p>Inviami un messaggio utilizzando il form seguente oppure contattami attraverso i miei profili social:</p>
+          <br>
+        </div>
+        <div id="contatti-social" class="contatti-social">
+          <p>SOCIAL</p>
+          <ul id="social-icons" class="social-icons">
+            <li><a class="fa fa-instagram" href="https://www.instagram.com/raffaeleb/" target="_blank"></a></li>
+            <li><a class="fa fa-facebook" href="https://www.facebook.com/raffaele.bini/" target="_blank"></a></li>
+            <li><a class="fa fa-linkedin" href="https://www.linkedin.com/in/raffaelebini/" target="_blank"></a></li>
+            <li><a class="fa fa-github" href="https://github.com/RaffaeleBini" target="_blank"></a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="contatticolonnadx">
     <form id="form" action="" method="get">
-      <label for="nome">Nome:</label><br>
-      <input type="text" id="nome" name="nome" value="Nome e Cognome"><br>
-      <label for="email">Indirizzo e-mail:</label><br>
-      <input type="email" id="email" name="email" placeholder="raffaele@esempio.it"><br>
-      <label for="messaggio">Messaggio:</label><br>
+      <label class="form-label" for="nome">Nome:</label><br>
+      <input type="text" id="nome" name="nome" value="Nome e Cognome"><br><br>
+      <label class="form-label" for="email">Indirizzo e-mail:</label><br>
+      <input type="email" id="email" name="email" placeholder="raffaele@esempio.it"><br><br>
+      <label class="form-label" for="messaggio">Messaggio:</label><br>
       <textarea name="messaggio" style="width:300px; height:200px;">Scrivi qui il tuo messaggio.</textarea><br>
-      <button>Submit</button>
+      <button id="form-button" class="form-button">Submit</button>
     </form>
     </div>
   </section>
