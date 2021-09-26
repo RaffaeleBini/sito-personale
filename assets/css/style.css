@@ -274,6 +274,20 @@ h3 {
   flex-flow: wrap;*/
 }
 
+#timeline::-webkit-scrollbar {
+  width: 10px; 
+}
+
+#timeline::-webkit-scrollbar-track {
+  background: var(--colore-uno);
+}
+
+#timeline::-webkit-scrollbar-thumb {
+  background-color: var(--colore-due);
+  border-radius: 5px;
+  /*border: 3px solid var;*/
+}
+
 .timeline-title {
   text-align: center;
   max-height: auto;
@@ -296,6 +310,8 @@ h3 {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  scrollbar-width: 2px;
+  scrollbar-color: var(--colore-uno);
 }
 #timeline:before {
   content: "";
@@ -427,12 +443,53 @@ h3 {
   color: var(--colore-due);
 }
 
-.skillsbox {
-  background-color: white;
+.cosafacciocolonnadx {
+  background-color: var(--colore-due);
   height: 100vh;
   width: 100%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
   flex: 1 1 60%;
   border: 1px solid black;
+}
+
+.skillsbox {
+  background-color: var(--colore-tre);
+  height: 150px;
+  margin: 5vh;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: stretch;
+  /*flex: 1 1 45%;*/
+  border: 2px solid var(--colore-uno);
+}
+
+.skillsbox-icon {
+  height: 150px;
+  width: 150px;
+  background-color: var(--colore-uno);
+  color: var(--colore-due);
+  z-index: 10;
+  /*flex: 1 1 30%;*/
+  border: 1px solid black;
+}
+
+.skillsbox-txt {
+  height: auto;
+  /*flex: 1 1 70%;*/
+  border: 1px solid black;
+}
+
+.skillsbox-txt p {
+  color: var(--colore-uno);
 }
 
 .contatticolonnasx {
