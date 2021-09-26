@@ -26,6 +26,11 @@ h2 {
   line-height: 1.2;
 }
 
+h3 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
 .bodycontainer {
   width: 100%;
   display: flex;
@@ -260,10 +265,21 @@ h2 {
   border: 1px solid black;
 }
 
+.timeline-container {
+  /*max-height: auto;*/
+  max-width: 90%;
+  /*align-self: center;
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;*/
+}
+
 .timeline-title {
   text-align: center;
   max-height: auto;
   max-width: 90%;
+  position: relative;
+  top: 0;
   align-self: center;
 }
 
@@ -277,6 +293,9 @@ h2 {
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 #timeline:before {
   content: "";
@@ -333,7 +352,7 @@ h2 {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-#timeline .timeline-item .timeline-content h2 {
+#timeline .timeline-item .timeline-content h3 {
   padding: 10px;
   background: var(--colore-due);
   color: var(--colore-uno);
@@ -346,7 +365,7 @@ h2 {
 }
 #timeline .timeline-item .timeline-content:before {
   content: "";
-  position: absolute;
+  position: absolute; /*DA CAPIRE*/
   left: 45%;
   top: 20px;
   width: 0;
