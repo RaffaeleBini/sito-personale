@@ -9,7 +9,7 @@
     <meta name="description" content="Raffaele Bini Personal Page and Portfolio">
     <meta name="keywords" content="HTML, CSS, Blog, Portfolio">
     <meta name="author" content="Raffaele Bini">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no">
     <title>Raffaele Bini</title>
     <meta name="og:title" content="Raffaele Bini">
     <link rel="alternate" href="/" hreflang="it" />
@@ -42,251 +42,111 @@
     </script>
     <script>
       function openNav() {
-        document.getElementById("navbar").style.height = "50px";
+        document.getElementById("navbar").style.width = "250px";
+        document.getElementById("body").style.marginLeft = "250px";
       }
       
       function closeNav() {
-        document.getElementById("navbar").style.height = "0";
+        document.getElementById("navbar").style.width = "0";
+        document.getElementById("body").style.marginLeft= "0";
       }
     </script>
   </head>
 
-  <body onload="typeWriter()">
-  <!--Creo un contenitore per l'intera struttura del corpo della pagina, che uso per gestire le sezioni con flexbox-->
-  <div id="bodycontainer" class="bodycontainer">
+  <!--Creo il body come contenitore di tutte le sezioni del sito -->
+  <body onload="typeWriter()" id="body" class="body">
 
   <!-- Menu di navigazione -->
   <header id="header" class="header">
     <nav id="navbar" class="navbar">
+      <button class="closebtn" onclick="closeNav()">x</button>
         <ul id="menulist" class="menulist">
-        <!-- <ul class="nav-links"> -->     
-          <li class="menuelement"><a href=#introcontainer class="is-active">Home</a></li>
-          <li class="menuelement"><a href=#chisono>Chi sono</a></li>
-          <li class="menuelement"><a href=#cosafaccio>Cosa faccio</a></li>
+        <!-- <ul class="nav-links"> -->   
+          <li class="menuelement"><a href=#home class="is-active">Home</a></li>
+          <li class="menuelement"><a href=#sudime>Su di Me</a></li>
+          <li class="menuelement"><a href=#formazione>Formazione</a></li>
+          <li class="menuelement"><a href=#esperienza>Esperienza</a></li>
+          <li class="menuelement"><a href=#skills>Skills</a></li>
+          <li class="menuelement"><a href=#portfolio>Portfolio</a></li>
           <li class="menuelement"><a href=#contatti>Contatti</a></li>
         </ul>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
     </nav>
     <button class="openbtn" onclick="openNav()">☰</button>
   </header>
 
   <!--Trasformo l'header in un contenitore per flexbox-->
-  <section id="introcontainer" class="introcontainer scroll">
+  <section id="home" class="home scroll">
     <!--Creo un sottocontainer per strutturare il titolo e l'intestazione-->  
       <div id="titolo" class="titolo">
         <h1 id="typewriter"></h1>
       </div>
       <div id="linea" class="linea"></div>
-    </section>
+      <div id="sottotitolo" class="titolo">
+        <h2>Ricerco la bellezza della vita</h2>
+      </div>
+      <div id="presentazione" class="titolo">
+        <br>
+        <p>Ingegnere Creativo appassionato di Crescita Personale e Miglioramento Continuo</p>
+        <br>
+        <p>Metto il buono ed il bello in quello che faccio e aiuto a risolvere problemi e semplificare la complessità</p>
+        <br>
+        <p>Focalizzato nella Transizione Digitale ed in quella Ecologica</p>
+      </div>
+  </section>
   
-  <!--Chi sono: pagina con descrizione personale-->
-  <section id="chisono" class="sectioncontainer scroll">
-    <div class="chisonocolonnasx">
-      <div id="chisono-card" class="chisono-card">
-        <div id="chisono-img" class="chisono-img">
-          <img class="chisono-img" src="./assets/img/foto.jpg">
-        </div>
-        <div id="chisono-txt" class="chisono-txt">
-          <br>
-          <h2>💡 Pensatore Indipendente ed Ingegnere Creativo</h2>
-          <br>
-          <p>Instancabilmente in cammino lungo la via dell’evoluzione personale e desideroso di contribuire a quella della società. Agente del Cambiamento volto alla ricerca continua dell"Eccellenza, generata da Lavoro e Relazioni significative.</p>
-          <br>
-          <p>Credo nell’Etica e nella Sostenibilità del lavoro ed i miei Principi Personali sono:</p>
-          <br>  
-          <ul>
-            <li>✔️ Onestà, Autenticità ed Integrità</li>
-            <li>✔️ Trasparenza ed Apertura Mentale</li>
-            <li>✔️ Rispetto e Gentilezza</li>
-            <li>✔️ Gratitudine e Generosità</li>
-            <li>✔️ Positività ed Entusiasmo</li>
-          </ul>
-          <br>
-          <p>Quel che più mi motiva è coltivare Relazioni con le persone, confrontarmi con le sfide dei Cambiamenti e cercare continuamente opportunità per Imparare.</p>
-          <br>
-          <p>🎯 Ricerco l’Eccellenza per crescere e costruire Relazioni ed Esperienze significative, condividere un senso di Comunità e contribuire ad un presente ed un futuro Sostenibili.</p>
-        </div>
+  <!--Su di me: pagina con descrizione personale-->
+  <section id="sudime" class="sectioncontainer sudime scroll">
+    <div id="sudimetitolo" class="titolo">
+      <h2>Su di me</h2>
+    </div>  
+    <div id="sudimesottotitolo" class="titolo">
+        <h3>Spirito Libero e Pensatore Indipendente</h3>
+    </div> 
+    <div id="sudimecontenuto" class="sudimecontenuto">
+      <div id="sudimeimg" class="sudimeimg">
+        <img src="./assets/img/foto.jpg">
       </div>
-    </div>
-    <div class="chisonocolonnadx">
-      <div id="timeline-title" class="timeline-title">
-        <h2>Evoluzione Personale</h2>
-      </div>
-      <div id="timeline">
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/21.png" width="50" alt="">
-          </div>
-          <div class="timeline-content">
-            <h3>Fondamenti di Marketing Digitale</h3>
-            <p>Rilasciato da Google Digital Training</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/21.png" width="50" alt="">
-          </div>
-          <div class="timeline-content">
-            <h3>Scrum Fundamentals Certified</h3>
-            <p>SCRUMstudy - Accreditation Body for Scrum and Agile</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/20.png" width="50" alt="">
-          </div>
-          <div class="timeline-content">
-            <h3>2020 Cammino a Finisterre</h3>
-            <p>A piedi fino alla fine del mondo</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/18.png" width="50" alt="">
-          </div>
-          <div class="timeline-content right">
-            <h3>Production Manager</h3>
-            <p>Illycaffé - Trieste</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/16.png" width="50" alt="">
-          </div>
-          <div class="timeline-content right">
-            <h3>Engineering & Maintenance Manager</h3>
-            <p>Sanpellegrino - San Pellegrino Terme (BG)</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/16.png" width="50" alt="">
-          </div>
-          <div class="timeline-content">
-            <h3>Executive Master MASGI</h3>
-            <p>ISTUM - Master in Sistemi di Gestione Integrati: Qualitò, Ambiente, Sicurezza ed Energia</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/15.png" width="50" alt="">
-          </div>
-          <div class="timeline-content">
-            <h3>Energy Management Expert</h3>
-            <p>The ACS Scuola Italiana di Alta Formazione - Advanced Certificate</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/14.png" width="50" alt="">
-          </div>
-          <div class="timeline-content">
-            <h3>Cammino Portoghese</h3>
-            <p>Camminando da Porto a Santiago de Compostela</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/13.png" width="50" alt="">
-          </div>
-          <div class="timeline-content right">
-            <h3>Industrial Performance Manager</h3>
-            <p>Acqua Panna - Scarperia e San Piero (FI)</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/13.png" width="50" alt="">
-          </div>
-          <div class="timeline-content">
-            <h3>Six Sigma Green Belt Certificate</h3>
-            <p>Nestlé & Morestream</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/11.png" width="50" alt="">
-          </div>
-          <div class="timeline-content right">
-            <h3>Engineering & Maintenance Manager</h3>
-            <p>Sanpellegrino - San Pellegrino Terme (BG)</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/10.png" width="50" alt="">
-          </div>
-          <div class="timeline-content">
-            <h3>TPM Coach Certificate</h3>
-            <p>Nestlé</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/10.png" width="50" alt="">
-          </div>
-          <div class="timeline-content right">
-            <h3>Production Supervisor</h3>
-            <p>Sanpellegrino - San Pellegrino Terme (BG)</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/8.png" width="50" alt="">
-          </div>
-          <div class="timeline-content right">
-            <h3>Quality & Food Safety Manager</h3>
-            <p>Nestlé Waters Italy - Milano (MI)</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/5.png" width="50" alt="">
-          </div>
-          <div class="timeline-content right">
-            <h3>Project Manager</h3>
-            <p>Nestlé Waters Italy - Scarperia e San Piero (FI)</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/4.png" width="50" alt="">
-          </div>
-          <div class="timeline-content">
-            <h3>Laurea in Ingegneria Meccanica</h3>
-            <p>Università degli Studi di Firenze</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <img src="assets/img/21.png" width="50" alt="">
-          </div>
-          <div class="timeline-content right">
-            <h3>Assistente Bagnanti</h3>
-            <p>Bagnino e Istruttore di Nuoto in piscina - Firenze (FI)</p>
-          </div>
-        </div>
-
-      </div>
+      <div id="sudimetxt" class="sudimetxt">
+        <p>La mia storia inizia il <b>1 Ottobre del 1978</b> a <b>Firenze</b>. Sono nato - forse dovrei scrivere «siamo», perché ero in compagnia di mio fratello gemello! - in una domenica  di pioggia, come raccontano i miei genitori (che non sapevano che eravamo in due!).</p>
+        <p>Sono cresciuto mangiando in abbondanza tutte le cose buone che cucinava la nonna e tanti biscotti e ovetti di cioccolata; mi piaceva andare a scuola, esplorare i dintorni di casa con la bicicletta, costruire mondi con i lego, scavare gallerie sotterranee e ammassare terra creando percorsi per le macchinine, guardare i cartoni animati giapponesi, attaccare le figurine panini e disegnare con le matite colorate.</p>
+        <p>Da bambino volevo fare il pompiere, l’inventore, lo scienziato, il disegnatore di automobili. Da grande sono diventato Ingegnere e, con il tempo, ho capito di avere un’indole <b>«multipotenziale»</b>: una persona che ha tanti interessi, ha svolto tanti lavori e che grazie a questo intreccio di conoscenze e passioni sviluppa un potenziale multidisciplinare che applica in qualsiasi lavoro o sfida quotidiana.</p>
+        <p>Il <b>Liceo Classico</b> mi ha insegnato  la Bellezza, il Pensiero Indipendente, il valore della Diversità, la Meraviglia e l’amore per il Sapere. Nella <b>Facoltà di Ingegneria</b> ho imparato che i risultati si ottengono rimboccandosi le maniche e lavorando con metodo e dedizione, che non è  importante non cadere mai al tappeto, ma avere la forza di rialzarsi ogni volta e che la chiave per arrivare in fondo è nel credere in se stessi. </p>     
+        <p>Sono curioso, generoso, riflessivo e calmo; sono un «buono», ma non fatemi arrabbiare.</p>
+        <p>Credo nell’<b>Etica</b>, nell’<b>Onestà</b> e nel <b>Rispetto</b>.</p>
+        <p>Mi piace fare lunghe camminate e fischiettare: ho un approccio positivo alla vita e ho imparato a ricercare la felicità in ogni momento ed in ogni piccola cosa.</p>
+      </div>  
     </div>
   </section>
-  <!--Fine Chisono-->
+  <!--Fine Su di me-->
+
+  <!--Formazione: pagina con percorso formativo-->
+  <section id="formazione" class="sectioncontainer formazione scroll">
+    <div id="formazionetitolo" class="titolo">
+      <h2>Formazione</h2>
+    </div>  
+    <div id="formazionesottotitolo" class="titolo">
+        <h3>"Growth Seeker" instancabilmente lungo il cammino di Crescita Personale </h3>
+    </div> 
+    <div id="formazionecontenuto" class="formazionecontenuto">
+      <div id="formazionetxt" class="formazionetxt">
+        <h4>2021</h4>
+        <p>FONDAMENTI DI MARKETING DIGITALE| Google Digital Training</p>
+        <p>ELEMENTS OF AI | Reaktor</p>
+        <p>SCRUM FUNDAMENTAL CERTIFIED | SCRUMStudy</p>
+        <h4>2018</h4>
+        <p>CERTIFICATORE ENERGETICO DEGLI EDIFICI | Beta Formazione</p>
+        <h4>2016</h4>
+        <p>EXECUTIVE MASTER IN SISTEMI DI GESTIONE INTEGRATI: QUALITA’, SICUREZZA, AMBIENTE, ENERGIA | ISTUM</p>
+        <h4>2015</h4>
+        <p>ESPERTO IN GESTIONE DELL’ENERGIA | The ACS Scuola Italiana di Alta Formazione</p>
+        <h4>2013</h4>
+        <p>SIX SIGMA GREEN BELT CERTIFICATE | Nestlé & Morestream</p>
+        <h4>2004</h4>
+        <p>LAUREA IN INGEGNERIA MECCANICA | Università degli Studi di Firenze</p>
+      </div>  
+    </div>
+  </section>
+  <!--Fine Su di me-->
 
   <!--Cosa Faccio-->
   <!--https://www.flexboxpatterns.com/side-bar-->
