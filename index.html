@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <link rel="stylesheet" href="./assets/css/social-circles.min.css">
     <link rel="stylesheet" href="./assets/css/social-circles.css">
+    
+    <!-- VALUTARE se mettere tutti gli SCRIPT in file ESTERNO -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script>
     <script>
@@ -32,7 +34,7 @@
           setTimeout(typeWriter, speed);
         }
       }
-      </script>
+    </script>
     <script>
       $(function() {
         $.scrollify({
@@ -49,6 +51,22 @@
       function closeNav() {
         document.getElementById("navbar").style.width = "0";
         document.getElementById("body").style.marginLeft= "0";
+      }
+    </script>
+    <script>
+      var coll = document.getElementsByClassName("fisarmonica");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("fisactive");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+        });
       }
     </script>
   </head>
@@ -102,6 +120,7 @@
     <div id="sudimesottotitolo" class="titolo">
         <h3>Spirito Libero e Pensatore Indipendente</h3>
     </div> 
+    <div id="linea" class="linea"></div>
     <div id="sudimecontenuto" class="sudimecontenuto">
       <div id="sudimeimg" class="sudimeimg">
         <img src="./assets/img/foto.jpg">
@@ -127,6 +146,7 @@
     <div id="formazionesottotitolo" class="titolo">
         <h3>"Growth Seeker" instancabilmente lungo il cammino di Crescita Personale </h3>
     </div> 
+    <div id="linea" class="linea"></div>
     <div id="formazionecontenuto" class="formazionecontenuto">
       <div id="formazionetxt" class="formazionetxt">
         <h4>2021</h4>
@@ -146,7 +166,78 @@
       </div>  
     </div>
   </section>
-  <!--Fine Su di me-->
+  <!--Fine Formazione. DA INSERIRE GRAFICO SU AMBITI FORMAZIONE-->
+
+  <!--Esperienza: pagina con percorso lavorativo-->
+   <section id="esperienza" class="sectioncontainer esperienza scroll">
+    <div id="esperienzatitolo" class="titolo">
+      <h2>Esperienza</h2>
+    </div>  
+    <div id="esperienzasottotitolo" class="titolo">
+        <h3>Conferire significato al Lavoro ed alle Relazioni</h3>
+    </div> 
+    <div id="linea" class="linea"></div>
+    <div id="esperienzacontenuto" class="esperienzacontenuto">
+      <div id="esperienzatxt" class="esperienzatxt">
+        <p>Nel mio percorso professionale ho avuto l’opportunità di lavorare in luoghi ed ambiti diversi: grazie a queste esperienze ed ai colleghi che mi hanno aiutato a crescere, ho imparato che il segreto per raggiungere qualsiasi risultato è investire nel benessere e nella crescita delle Persone e creare un Ambiente di Lavoro che generi la passione per la propria mansione.</p>
+      </div>
+      <button class="fisarmonica">2018 - | PRODUCTION MANAGER @ Illycaffé</button> 
+      <div class="content">
+        <p>Gestione ed organizzazione della produzione dei prodotti porzionati, della manutenzione degli impianti produttivi e di tutti gli aspetti legati a Qualità, Sicurezza ed Ambiente Gestione e sviluppo del personale di reparto Supporto allo sviluppo ed industrializzazione di nuovi prodotti</p>
+      </div> 
+      <button class="fisarmonica">2016 - 2018 | ENGINEERING MANAGER @ Gruppo Sanpellegrino</button> 
+      <div class="content">
+        <p>Gestione di Investimenti e Progetti</p>
+        <p>Gestione della Manutenzione degli impianti produttivi, ausiliari e fabbricati</p>
+        <p>Sviluppo delle persone e delle competenze tecniche</p>
+        <p>Miglioramento delle Performances di Stabilimento</p>
+        <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
+        <p>Gestione dell'Energia</p>
+      </div> 
+      <button class="fisarmonica">2013 - 2016 | INDUSTRIAL PERFORMANCE MANAGER @ Gruppo Sanpellegrino</button> 
+      <div class="content">
+        <p>Sviluppo dell'Operational Masterplan di stabilimento</p>
+        <p>Miglioramento Continuo attraverso gli strumenti di Lean Manufacturing, Kaizen e TPM</p>
+        <p>Sviluppo delle persone e delle competenze di Problem Solving</p>
+        <p>Ingegneria di Processo</p>
+      </div> 
+      <button class="fisarmonica">2011 - 2013 | ENGINEERING MANAGER @ Gruppo Sanpellegrino</button> 
+      <div class="content">
+        <p>Gestione di Investimenti e Progetti</p>
+        <p>Gestione della Manutenzione degli impianti produttivi, ausiliari e fabbricati</p>
+        <p>Sviluppo delle persone e delle competenze tecniche</p>
+        <p>Miglioramento delle Performances di Stabilimento</p>
+        <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
+        <p>Gestione dell'Energia</p>
+      </div> 
+      <button class="fisarmonica">2010 - 2011 | PRODUCTION SUPERVISOR @ Gruppo Sanpellegrino</button> 
+      <div class="content">
+        <p>Garantire la produzione nel rispetto della Qualità e dei tempi</p>
+        <p>Gestione delle persone</p>
+        <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
+        <p>Migliorare le performances di produzione</p>
+      </div> 
+      <button class="fisarmonica">2008 - 2010 | QUALITY & FOOD SAFETY SYSTEM MANAGER @ Gruppo Sanpellegrino</button> 
+      <div class="content">
+        <p>Definizione ed implementazione del Sistema di Gestione della Qualità</p>
+        <p>Definizione ed implementazione del Sistema di Gestione della Sicurezza Alimentare</p>
+        <p>Coordinamento del processo di Certificazione ISO 22000</p>
+        <p>Coordinamento dei Sistemi di Gestione negli Stabilimenti</p>
+      </div> 
+      <button class="fisarmonica">2005 - 2008 | PROJECT MANAGER @ Gruppo Sanpellegrino</button> 
+      <div class="content">
+        <p>Mappatura dei Processi</p>
+        <p>Gestione dei Progetti di Business Excellence</p>
+        <p>Implementazione del sistema SAP in Produzione, Manutenzione, Qualità, Logistica e Pianificazione</p>
+      </div> 
+      <button class="fisarmonica">1998 - 2004 | ASSISTENTE BAGNANTI e ISTRUTTORE DI NUOTO</button> 
+      <div class="content">
+        <p>Assistente Bagnanti</p>
+        <p>Istruttore di nuoto per bambini e adulti</p>
+      </div> 
+    </div>
+  </section>
+  <!--Fine Formazione. DA INSERIRE GRAFICO SU AMBITI FORMAZIONE-->
 
   <!--Cosa Faccio-->
   <!--https://www.flexboxpatterns.com/side-bar-->
