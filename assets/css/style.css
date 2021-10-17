@@ -238,7 +238,7 @@ h3 {
 .sudimeimg {
   height: auto;
   position: relative;
-  top: 0;
+  top: 2vh;
   left: 5vw;
   flex: 1 1 25%;
 }
@@ -252,6 +252,7 @@ h3 {
   height: auto;
   margin-left: 2vw;
   margin-right: 2vw;
+  margin-top: 2vh;
   flex: 1 1 75%;
 }
 
@@ -311,208 +312,88 @@ h3 {
   height: auto;
   margin-left: 5vw;
   margin-right: 2vw;
+  margin-top: 2vh;
   flex: 1 1 100%;
 }
 
-.chisono-card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 4px;
-  overflow: hidden;
-  max-height: 90%;
-  max-width: 90%;
-  align-self: center;
-}
-
-.chisono-img {
-  border-radius: 200px;
-  /*display: block;*/
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 180px;
-  max-height: 180px;
-}
-
-.chisono-txt {
-  /*display: block;*/
-  margin-left: auto;
-  margin-right: auto;
-  max-width: auto;
-  max-height: auto;
-}
-
-.chisono-txt p, ul, li {
-  /*font-family: "Glory", sans-serif;
-  font-size: 16px;
-  line-height: 1.2;*/
-  color: var(--colore-uno);
-}
-
-.chisono-txt h1 {
-  /*font-family: "Glory", sans-serif;
-  font-size: 36px;
-  line-height: 1.2;*/
-  color: var(--colore-uno);
-}
-
-.chisono-txt h2 {
-  /*font-family: "Glory", sans-serif;
-  font-size: 28px;
-  line-height: 1.2;*/
-  color: var(--colore-uno);
-}
-
-.chisonocolonnadx {
-  background-color: var(--colore-uno);
+/*Standardizzare un tipo per sudime ed esperienza?*/
+.esperienza {
+  background-color: var(--colore-quattro);
   height: 100vh;
   width: 100%;
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  flex: 1 1 55%;
+  align-self: center;
   border: 1px solid black;
 }
 
-.timeline-container {
-  /*max-height: auto;*/
-  max-width: 90%;
-  /*align-self: center;
-  display: flex;
-  flex-direction: column;
-  flex-flow: wrap;*/
+.esperienza h1 {
+  color: var(--colore-quattro);
+  font-size: 80px;
+  font-weight: bold;
 }
 
-#timeline::-webkit-scrollbar {
-  width: 10px; 
-}
-
-#timeline::-webkit-scrollbar-track {
-  background: var(--colore-uno);
-}
-
-#timeline::-webkit-scrollbar-thumb {
-  background-color: var(--colore-due);
-  border-radius: 5px;
-  /*border: 3px solid var;*/
-}
-
-.timeline-title {
-  text-align: center;
-  max-height: auto;
-  max-width: 90%;
-  position: relative;
-  top: 0;
-  align-self: center;
-}
-
-/*TIMELINE*/
-#timeline {
-  width: 100%;
-  margin: 30px auto;
-  position: relative;
-  padding: 0 10px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  scrollbar-width: 2px;
-  scrollbar-color: var(--colore-uno);
-}
-#timeline:before {
-  content: "";
-  width: 3px;
-  height: 100%;
-  background: var(--colore-due);
-  left: 50%;
-  top: 0;
-  position: absolute;
-}
-#timeline:after {
-  content: "";
-  clear: both;
-  display: table;
-  width: 100%;
-}
-#timeline .timeline-item {
-  margin-bottom: 50px;
-  position: relative;
-}
-#timeline .timeline-item .timeline-icon {
-  background: var(--colore-due);
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  overflow: hidden;
-  margin-left: -23px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-}
-#timeline .timeline-item .timeline-icon svg {
-  position: relative;
-  top: 14px;
-  left: 14px;
-}
-#timeline .timeline-item .timeline-content {
-  width: 45%;
-  background: var(--colore-uno);
-  padding: 20px;
-  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-#timeline .timeline-item .timeline-content h3 {
-  padding: 10px;
-  background: var(--colore-due);
+.esperienza h2 {
   color: var(--colore-uno);
-  margin: -10px -10px 0 -10px;
-  font-weight: 300;
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  -ms-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-}
-#timeline .timeline-item .timeline-content:before {
-  content: "";
-  position: absolute; /*DA CAPIRE*/
-  left: 45%;
-  top: 20px;
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 7px solid var(--colore-due);
-}
-#timeline .timeline-item .timeline-content.right {
-  float: right;
-}
-#timeline .timeline-item .timeline-content.right:before {
-  content: "";
-  right: 45%;
-  left: inherit;
-  border-left: 0;
-  border-right: 7px solid var(--colore-due);
+  font-size: 60px;
+  font-weight: bold;
 }
 
-/*FINE TIMELINE*/
+.esperienza h3 {
+  color: var(--colore-due);
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.esperienza p {
+  color: var(--colore-uno);
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.esperienzacontenuto {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid black;
+}
+
+.esperienzatxt {
+  height: auto;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  /*flex: 1 1 75%;*/
+}
+
+.fisarmonica {
+  background-color: var(--colore-tre);
+  color: var(--colore-uno);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+}
+
+.fisactive, .fisarmonica:hover {
+  background-color: var(--colore-due);
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: var(--colore-quattro);
+}
+
 
 .cosafacciocolonnasx {
   background-color: var(--colore-uno);
