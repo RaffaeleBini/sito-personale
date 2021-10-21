@@ -53,26 +53,28 @@
         document.getElementById("body").style.marginLeft= "0";
       }
     </script>
+    
     <script>
-      var coll = document.getElementsByClassName("fisarmonica");
-      var i;
-      
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-          this.classList.toggle("fisactive");
-          var content = this.nextElementSibling;
-          if (content.style.maxHeight){
-            content.style.maxHeight = null;
-          } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-          } 
-        });
+      function openExperience(evt, expnr) {
+        var i, descrizione, tablinks;
+        descrizione = document.getElementsByClassName("descrizione");
+        for (i = 0; i < descrizione.length; i++) {
+          descrizione[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(expnr).style.display = "block";
+        evt.currentTarget.className += " active";
       }
-    </script>
+      
+      document.getElementById("defaultOpen").click();
+      </script>
   </head>
 
   <!--Creo il body come contenitore di tutte le sezioni del sito -->
-  <body onload="typeWriter()" id="body" class="body">
+  <body onload="typeWriter(); openExperience(event, 'otto')" id="body" class="body">
 
   <!-- Menu di navigazione -->
   <header id="header" class="header">
@@ -180,8 +182,8 @@
   </section>
   <!--Fine Formazione. DA INSERIRE GRAFICO SU AMBITI FORMAZIONE-->
 
-  <!--Esperienza: pagina con percorso lavorativo-->
-   <section id="esperienza" class="sectioncontainer esperienza scroll">
+   <!--Esperienza: pagina con percorso lavorativo-->
+  <section id="esperienza" class="sectioncontainer esperienza scroll">
     <div id="esperienzatitolo" class="titolo">
       <h2>Esperienza</h2>
     </div>  
@@ -193,85 +195,26 @@
       <div id="esperienzatxt" class="esperienzatxt">
         <p>Nel mio percorso professionale ho avuto l’opportunità di lavorare in luoghi ed ambiti diversi: grazie a queste esperienze ed ai colleghi che mi hanno aiutato a crescere, ho imparato che il segreto per raggiungere qualsiasi risultato è investire nel benessere e nella crescita delle Persone e creare un Ambiente di Lavoro che generi la passione per la propria mansione.</p>
       </div>
-      <button class="fisarmonica">2018 - | PRODUCTION MANAGER @ Illycaffé</button> 
-      <div class="content">
-        <p>Gestione ed organizzazione della produzione dei prodotti porzionati, della manutenzione degli impianti produttivi e di tutti gli aspetti legati a Qualità, Sicurezza ed Ambiente Gestione e sviluppo del personale di reparto Supporto allo sviluppo ed industrializzazione di nuovi prodotti</p>
-      </div> 
-      <button class="fisarmonica">2016 - 2018 | ENGINEERING MANAGER @ Gruppo Sanpellegrino</button> 
-      <div class="content">
-        <p>Gestione di Investimenti e Progetti</p>
-        <p>Gestione della Manutenzione degli impianti produttivi, ausiliari e fabbricati</p>
-        <p>Sviluppo delle persone e delle competenze tecniche</p>
-        <p>Miglioramento delle Performances di Stabilimento</p>
-        <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
-        <p>Gestione dell'Energia</p>
-      </div> 
-      <button class="fisarmonica">2013 - 2016 | INDUSTRIAL PERFORMANCE MANAGER @ Gruppo Sanpellegrino</button> 
-      <div class="content">
-        <p>Sviluppo dell'Operational Masterplan di stabilimento</p>
-        <p>Miglioramento Continuo attraverso gli strumenti di Lean Manufacturing, Kaizen e TPM</p>
-        <p>Sviluppo delle persone e delle competenze di Problem Solving</p>
-        <p>Ingegneria di Processo</p>
-      </div> 
-      <button class="fisarmonica">2011 - 2013 | ENGINEERING MANAGER @ Gruppo Sanpellegrino</button> 
-      <div class="content">
-        <p>Gestione di Investimenti e Progetti</p>
-        <p>Gestione della Manutenzione degli impianti produttivi, ausiliari e fabbricati</p>
-        <p>Sviluppo delle persone e delle competenze tecniche</p>
-        <p>Miglioramento delle Performances di Stabilimento</p>
-        <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
-        <p>Gestione dell'Energia</p>
-      </div> 
-      <button class="fisarmonica">2010 - 2011 | PRODUCTION SUPERVISOR @ Gruppo Sanpellegrino</button> 
-      <div class="content">
-        <p>Garantire la produzione nel rispetto della Qualità e dei tempi</p>
-        <p>Gestione delle persone</p>
-        <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
-        <p>Migliorare le performances di produzione</p>
-      </div> 
-      <button class="fisarmonica">2008 - 2010 | QUALITY & FOOD SAFETY SYSTEM MANAGER @ Gruppo Sanpellegrino</button> 
-      <div class="content">
-        <p>Definizione ed implementazione del Sistema di Gestione della Qualità</p>
-        <p>Definizione ed implementazione del Sistema di Gestione della Sicurezza Alimentare</p>
-        <p>Coordinamento del processo di Certificazione ISO 22000</p>
-        <p>Coordinamento dei Sistemi di Gestione negli Stabilimenti</p>
-      </div> 
-      <button class="fisarmonica">2005 - 2008 | PROJECT MANAGER @ Gruppo Sanpellegrino</button> 
-      <div class="content">
-        <p>Mappatura dei Processi</p>
-        <p>Gestione dei Progetti di Business Excellence</p>
-        <p>Implementazione del sistema SAP in Produzione, Manutenzione, Qualità, Logistica e Pianificazione</p>
-      </div> 
-      <button class="fisarmonica">1998 - 2004 | ASSISTENTE BAGNANTI e ISTRUTTORE DI NUOTO</button> 
-      <div class="content">
-        <p>Assistente Bagnanti</p>
-        <p>Istruttore di nuoto per bambini e adulti</p>
-      </div> 
-    </div>
-  </section>
-  <!--Fine Formazione. DA INSERIRE GRAFICO SU AMBITI FORMAZIONE-->
+    
+      <div id="resume" class="resume">
+      <div id="esperienze" class="esperienze"> 
+        <button class="tablinks" onclick="openExperience(event, 'otto')" id="defaultOpen">2018 - | PRODUCTION MANAGER @ Illycaffé</button>
+        <button class="tablinks" onclick="openExperience(event, 'sette')">2016 - 2018 | ENGINEERING MANAGER @ Gruppo Sanpellegrino</button>
+        <button class="tablinks" onclick="openExperience(event, 'sei')">2013 - 2016 | INDUSTRIAL PERFORMANCE MANAGER @ Gruppo Sanpellegrino</button>
+        <button class="tablinks" onclick="openExperience(event, 'cinque')">2011 - 2013 | ENGINEERING MANAGER @ Gruppo Sanpellegrino</button>
+        <button class="tablinks" onclick="openExperience(event, 'quattro')">2010 - 2011 | PRODUCTION SUPERVISOR @ Gruppo Sanpellegrino</button>
+        <button class="tablinks" onclick="openExperience(event, 'tre')">2008 - 2010 | QUALITY & FOOD SAFETY SYSTEM MANAGER @ Gruppo Sanpellegrino</button>
+        <button class="tablinks" onclick="openExperience(event, 'due')">2005 - 2008 | PROJECT MANAGER @ Gruppo Sanpellegrino</button>
+        <button class="tablinks" onclick="openExperience(event, 'uno')">1998 - 2004 | ASSISTENTE BAGNANTI e ISTRUTTORE DI NUOTO</button>
+      </div>
+      
+      <div id="otto" class="descrizione">
+        <p>Gestione ed organizzazione della produzione dei prodotti porzionati, della manutenzione degli impianti produttivi e di tutti gli aspetti legati a Qualità, Sicurezza ed Ambiente</p>
+        <p>Gestione e sviluppo del personale di reparto</p>
+        <p> Supporto allo sviluppo ed industrializzazione di nuovi prodotti</p>
+      </div>
 
-  <!--Esperienza: pagina con percorso lavorativo-->
-  <section id="esperienza2" class="sectioncontainer esperienza scroll">
-    <div id="esperienzatitolo" class="titolo">
-      <h2>Esperienza</h2>
-    </div>  
-    <div id="esperienzasottotitolo" class="titolo">
-        <h3>Conferire significato al Lavoro ed alle Relazioni</h3>
-    </div> 
-    <div id="linea" class="linea"></div>
-    <div id="esperienzacontenuto" class="esperienzacontenuto">
-      <div id="esperienzatxt" class="esperienzatxt">
-        <p>Nel mio percorso professionale ho avuto l’opportunità di lavorare in luoghi ed ambiti diversi: grazie a queste esperienze ed ai colleghi che mi hanno aiutato a crescere, ho imparato che il segreto per raggiungere qualsiasi risultato è investire nel benessere e nella crescita delle Persone e creare un Ambiente di Lavoro che generi la passione per la propria mansione.</p>
-      </div>
-      <input id="tab-one" type="radio" name="grp" class="input" checked="checked"/>
-      <label class="label" for="tab-one">2018 - | PRODUCTION MANAGER @ Illycaffé</label>
-      <div class="descrizione">
-        <p>Gestione ed organizzazione della produzione dei prodotti porzionati, della manutenzione degli impianti produttivi e di tutti gli aspetti legati a Qualità, Sicurezza ed Ambiente Gestione e sviluppo del personale di reparto Supporto allo sviluppo ed industrializzazione di nuovi prodotti</p>
-      </div> 
-      <input id="tab-two" type="radio" name="grp" class="input"/>
-      <label class="label" for="tab-two">2016 - 2018 | ENGINEERING MANAGER @ Gruppo Sanpellegrino</label>
-      <div class="descrizione">
+      <div id="sette" class="descrizione">
         <p>Gestione di Investimenti e Progetti</p>
         <p>Gestione della Manutenzione degli impianti produttivi, ausiliari e fabbricati</p>
         <p>Sviluppo delle persone e delle competenze tecniche</p>
@@ -279,17 +222,15 @@
         <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
         <p>Gestione dell'Energia</p>
       </div> 
-      <input id="tab-three" type="radio" name="grp" class="input"/>
-      <label class="label" for="tab-three">2013 - 2016 | INDUSTRIAL PERFORMANCE MANAGER @ Gruppo Sanpellegrino</label>
-      <div class="descrizione">
+      
+      <div id="sei" class="descrizione">
         <p>Sviluppo dell'Operational Masterplan di stabilimento</p>
         <p>Miglioramento Continuo attraverso gli strumenti di Lean Manufacturing, Kaizen e TPM</p>
         <p>Sviluppo delle persone e delle competenze di Problem Solving</p>
         <p>Ingegneria di Processo</p>
       </div> 
-      <input id="tab-four" type="radio" name="grp" class="input"/>
-      <label class="label" for="tab-four">2011 - 2013 | ENGINEERING MANAGER @ Gruppo Sanpellegrino</label>
-      <div class="descrizione">
+            
+      <div id="cinque" class="descrizione">
         <p>Gestione di Investimenti e Progetti</p>
         <p>Gestione della Manutenzione degli impianti produttivi, ausiliari e fabbricati</p>
         <p>Sviluppo delle persone e delle competenze tecniche</p>
@@ -297,38 +238,141 @@
         <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
         <p>Gestione dell'Energia</p>
       </div> 
-      <input id="tab-five" type="radio" name="grp" class="input"/>
-      <label class="label" for="tab-five">2010 - 2011 | PRODUCTION SUPERVISOR @ Gruppo Sanpellegrino</label>
-      <div class="descrizione">
+      
+      <div id="quattro" class="descrizione">
         <p>Garantire la produzione nel rispetto della Qualità e dei tempi</p>
         <p>Gestione delle persone</p>
         <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
         <p>Migliorare le performances di produzione</p>
       </div> 
-      <input id="tab-six" type="radio" name="grp" class="input"/>
-      <label class="label" for="tab-six">2008 - 2010 | QUALITY & FOOD SAFETY SYSTEM MANAGER @ Gruppo Sanpellegrino</label>
-      <div class="descrizione">
+            
+      <div id="tre" class="descrizione">
         <p>Definizione ed implementazione del Sistema di Gestione della Qualità</p>
         <p>Definizione ed implementazione del Sistema di Gestione della Sicurezza Alimentare</p>
         <p>Coordinamento del processo di Certificazione ISO 22000</p>
         <p>Coordinamento dei Sistemi di Gestione negli Stabilimenti</p>
       </div> 
-      <input id="tab-seven" type="radio" name="grp" class="input"/>
-      <label class="label" for="tab-seven">2005 - 2008 | PROJECT MANAGER @ Gruppo Sanpellegrino</label>
-      <div class="descrizione">
+      
+      <div id="due" class="descrizione">
         <p>Mappatura dei Processi</p>
         <p>Gestione dei Progetti di Business Excellence</p>
         <p>Implementazione del sistema SAP in Produzione, Manutenzione, Qualità, Logistica e Pianificazione</p>
       </div> 
-      <input id="tab-eight" type="radio" name="grp" class="input"/>
-      <label class="label" for="tab-eight">1998 - 2004 | ASSISTENTE BAGNANTI e ISTRUTTORE DI NUOTO</label>
-      <div class="descrizione">
+      
+      <div id="uno" class="descrizione">
         <p>Assistente Bagnanti</p>
         <p>Istruttore di nuoto per bambini e adulti</p>
       </div>
+      </div>
+      
     </div>
   </section>
-  <!--Fine Formazione. DA INSERIRE GRAFICO SU AMBITI FORMAZIONE-->
+  <!--Fine Esperienza.-->
+
+  <!--Skills: pagina con capacità e competenze-->
+  <section id="skills" class="sectioncontainer skills scroll">
+    <div id="skillstitolo" class="titolo">
+      <h2>Skills</h2>
+    </div>  
+    <div id="skillssottotitolo" class="titolo">
+        <h3>Coltivo Sogni ed uso la Bellezza per trasformarli in Realtà e contribuire alla Transizione Ecologica e Digitale</h3>
+    </div> 
+    <div id="linea" class="linea"></div>
+    <div id="skillscontenuto" class="skillscontenuto">
+      <div id="skillstxtsoft" class="skillstxt">
+        <h4>SOFT SKILLS</h4>
+        <p>Intelligenza Emotiva</p>
+        <p>Problem Solving</p>
+        <p>Creatività</p>
+        <p>Trasparenza e Apertura Mentale</p>
+        <p>Rispetto e Gentilezza</p>
+        <p>Gratitudine e Generosità</p>
+        <p>Proattività ed Entusiasmo</p>
+
+      </div>
+      
+      <div class="skillsimg">
+        <img src="./assets/img/io03.png">
+      </div>
+
+      <div id="skillstxthard" class="skillstxt">
+        <h4>HARD SKILLS</h4>
+        <p>Project Management</p>
+        <p>Auditing e Reporting</p>
+        <p>SAP</p>
+        <p>Disegno Meccanico - CAD</p>
+        <p>Analisi Statistica - Minitab</p>
+        <p>Sviluppo Web - HTML, CSS, Javascript</p>
+        <p>Process Mapping</p>
+        <p>Failure Analysis</p>
+      </div>
+
+      <div class="skillsimg">
+        <img src="./assets/img/io02.jpg">
+      </div>
+
+      <div id="skillstxtspare" class="skillstxt">
+        <h4>TEMPO LIBERO</h4>
+        <p>Cucina</p>
+        <p>Disegno - Matita, Acquerello, Olio</p>
+        <p>Trombone</p>
+        <p>Pugilato</p>
+        <p>Scherma Storica</p>
+      </div>
+      
+      <div class="skillsimg">
+        <img src="./assets/img/boxe01.png">
+      </div>
+
+    </div>
+  </section>
+  <!--Fine Skills-->
+
+  <!--Portfolio-->
+  <section id="portfolio" class="sectioncontainer portfolio scroll">
+    <div id="portfoliotitolo" class="titolo">
+      <h2>Portfolio</h2>
+    </div>  
+    <div id="portfoliosottotitolo" class="titolo">
+        <h3>Coltivo Sogni ed uso la Bellezza per trasformarli in Realtà e contribuire alla Transizione Ecologica e Digitale</h3>
+    </div> 
+    <div id="linea" class="linea"></div>
+    <div id="portfoliocontenuto" class="portfoliocontenuto">
+      <form>
+        <ul>
+          <li>
+            <input id="rad1" type="radio" name="rad" class="accinput">
+            <label for="rad1" class="acclabel">1</label>
+            <div class="accslide">
+              <h2>Slide 1</h2>
+              <p>Lorem ipsum...</p>
+              <img src="http://lorempixum.com/420/200/city/1" alt="">
+            </div>
+          </li>
+          <li>
+            <input id="rad2" type="radio" name="rad" class="accinput">
+            <label for="rad2" class="acclabel">2</label>
+            <div class="accslide">
+              <h2>Slide 2</h2>
+              <p>Lorem ipsum...</p>
+              <img src="http://lorempixum.com/420/200/city/2" alt="">
+            </div>
+          </li>
+          <li>
+            <input id="rad3" type="radio" name="rad" class="accinput">
+            <label for="rad3" class="acclabel">3</label>
+            <div class="accslide">
+              <h2>Slide 3</h2>
+              <p>Lorem ipsum...</p>
+              <img src="http://lorempixum.com/420/200/city/3" alt="">
+            </div>
+          </li>
+          <ul>  
+      </form> 
+    </div>
+  </section>
+  <!--Fine portfolio-->
+  
 
   <!--Cosa Faccio-->
   <!--https://www.flexboxpatterns.com/side-bar-->
