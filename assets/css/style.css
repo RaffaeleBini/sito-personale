@@ -310,18 +310,19 @@ h3 {
   border: 1px solid black;
 }
 
-.formazionetxtsx {
+.formazionetxt {
+  height: auto;
+  width: 30%;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 2vh;
+  flex: 1 1 30%;
+}
+
+/*.formazioneimg {
   height: auto;
   margin-left: 5vw;
   margin-right: 2vw;
-  margin-top: 2vh;
-  flex: 2 1 50%;
-}
-
-.formazioneimg {
-  height: auto;
-  /*margin-left: 5vw;
-  margin-right: 2vw;*/
   margin-top: 2vh;
   flex: 1 2 20%;
 }
@@ -330,14 +331,27 @@ h3 {
   height: auto;
   width: 30vw;
   opacity: 0.3;
+} */
+
+/*LISTA*/
+.featureListItem {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  padding: 10px;
 }
 
-.formazionetxtdx {
-  height: auto;
-  margin-left: 5vw;
-  margin-right: 2vw;
-  margin-top: 2vh;
-  flex: 2 1 50%;
+.featureListItem + .featureListItem {
+  border-top: 1px solid #D7DBDD;
+}
+
+.featureListItemIcon {
+  padding: 5px 15px;
+}
+
+.featureListItemIcon {
+  font-size: 50px;
+  line-height: 0;
 }
 
 /*Standardizzare un tipo per sudime ed esperienza?*/
@@ -496,7 +510,7 @@ h3 {
   height: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   align-items: stretch;
   justify-content: space-between;
   align-content: flex-start;
@@ -513,17 +527,67 @@ h3 {
 }
 
 .skills img {
-  height: auto;
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 2vh;
-  flex: 0 0 30%;
 }
 
-.skillsimg img {
-  height: 35vh;
-  width: auto;
-  opacity: 0.3;
+.skillbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/*card*/
+.skillcard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colore-tre);
+  border: 1px solid var(--colore-due);
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 120px;
+  height: 120px;
+  margin-top: 5px;
+}
+
+.skillCardDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.skillCardDescription img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+
+.skillCardText {
+  color: var(--colore-uno);
+  font-size: 16px;
+  text-align: center;
+  max-width: calc(100% - 30px);
+}
+
+.stelline {
+  text-align: center;
+  padding: 5px /*15px*/;
+  border-top: 1px solid var(--colore-due);
+  background-color: var(--colore-uno);
+}
+
+.stelline span {
+  font-size: 16px;
+  text-align: center;
+}
+
+.checked {
+  color: orange;
 }
 
 /*Portfolio*/
@@ -592,66 +656,7 @@ h3 {
   flex: 1 1 75%;
 }
 
-/*Accordion*/
-ul {
-  list-style: none;
-}
 
-.accinput {
-  position: static;
-  top: 0vh;
-  left: 0vw;
-}
-
-.acclabel {
-  display: block;
-  float: left;
-  height: 330px;
-  width: 50px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  background: #999;
-  text-align: center;
-  transition: width 1s ease, background 0.5s ease;
-}
-
-#rad2 + .acclabel {
-  background: #888;
-  transition: width 1s ease, background 0.5s ease;
-}
- 
-.acclabel:hover, #rad2 + .acclabel:hover {
-  background: #232323;
-  color: #fff;
-  cursor: pointer;
-}
-
-.accslide {
-  display: block;
-  height: 330px;
-  width: 0px;
-  padding: 10px 0;
-  float: left;
-  overflow: hidden;
-  color: #333;
-  background: #fff;
-  transition: all 1s ease;
-}
- 
-.accslide p, h2, img {
-  width: 420px;
-  padding-left: 10px;
-}
- 
-.accslide img {
-  margin-top: 10px;
-}
-
-.accinput[type="radio"]:checked ~ .accslide {
-  width: 450px;
-}
-
-/*fine ACCORDION*/
 
 .cosafacciocolonnasx {
   background-color: var(--colore-uno);
