@@ -56,7 +56,9 @@ h3 {
   height: 100%;
   width: 0;
   border: 1px solid black;
-  background-color: var(--colore-uno);
+  background-color: black;
+  /*background-color: var(--colore-uno);*/
+  opacity: 0.8;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -78,7 +80,7 @@ h3 {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 28px;
+  font-size: 40px;
   cursor: pointer;
   background-color: transparent;
   color: var(--colore-due);
@@ -110,21 +112,22 @@ h3 {
   list-style: none;
   /*display: inline block;*/
   margin-top: 5vh;
-  font-size: 30 px;
+  text-align: center;
+  font-size: 5vh;
 }
 
 .menuelement a:link, a:visited {
   color: var(--colore-tre);
   text-decoration: none;
-  text-transform: uppercase;
-  padding: 0 2vh;
+  /*text-transform: uppercase;*/
+  /*padding: 0 2vh;*/
   transition: 0.3s;
   }
 
 .menuelement a:hover, a:active {
   color: var(--colore-due);
   font-weight: bolder;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   transition: 0.3s;
   }
 
@@ -247,6 +250,7 @@ h3 {
 .sudime img {
   height: auto;
   width: 300px;
+  max-width: 90%;
 }
 
 .sudimetxt {
@@ -457,8 +461,8 @@ h3 {
 }
 
 
-/*skills*/
-.skills {
+/*portfolio*/
+.portfolio {
   background-color: var(--colore-uno);
   height: 100vh;
   width: 100%;
@@ -466,25 +470,25 @@ h3 {
   border: 1px solid black;
 }
 
-.skills h1 {
+.portfolio h1 {
   color: var(--colore-quattro);
   font-size: 80px;
   font-weight: bold;
 }
 
-.skills h2 {
+.portfolio h2 {
   color: var(--colore-quattro);
   font-size: 60px;
   font-weight: bold;
 }
 
-.skills h3 {
+.portfolio h3 {
   color: var(--colore-due);
   font-size: 45px;
   font-weight: bold;
 }
 
-.skills h4 {
+.portfolio h4 {
   color: var(--colore-uno);
   background-color: var(--colore-due);
   font-size: 20px;
@@ -493,14 +497,14 @@ h3 {
   margin-top: 15px;
 }
 
-.skills p {
+.portfolio p {
   color: var(--colore-tre);
   font-size: 20px;
   font-weight: normal;
   margin-bottom: 5px;
 }
 
-.skillscontenuto {
+.portfoliocontenuto {
   width: 100%;
   height: 80%;
   display: flex;
@@ -512,7 +516,7 @@ h3 {
   border: 1px solid black;
 }
 
-.skillstxt {
+.portfoliotxt {
   height: 45%;
   width: 30%;
   margin-left: 2vw;
@@ -521,36 +525,40 @@ h3 {
   flex: 0 0 40%;
 }
 
-.skills img {
+/*.skills img {
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 2vh;
-}
+}*/
 
-.skillbox {
+.portfoliobox {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: stretch;
   overflow: hidden;
   border: 1px solid var(--colore-due);
+  margin-bottom: 5px;
 }
 
 /*card*/
 
-.skillcardtitle {
+.portfoliocardtitle {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   background-color: var(--colore-due);
   border: 1px solid var(--colore-due);
   border-radius: 4px;
   overflow: hidden;
   max-width: 120px;
-  height: 120px;
-  margin-top: 5px;
+  height: 100px;
+  margin-top: 2px;
 }
 
-.skillcard {
+.portfoliocard {
   display: flex;
   flex-direction: column;
   background-color: var(--colore-tre);
@@ -558,27 +566,32 @@ h3 {
   border-radius: 4px;
   overflow: hidden;
   width: 120px;
-  height: 120px;
-  margin-top: 5px;
+  height: 100px;
+  margin-top: 2px;
+  margin-right: 2px;
 }
 
-.skillCardDescription {
+.portfolioCardDescription {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
+  /*padding: 5px 0;*/
 }
 
-.skillCardDescription img {
-  max-width: 100px;
-  max-height: 100px;
-  margin-bottom: 10px;
+.icon {
+  font-size: 40px;
 }
 
-.skillCardText {
+.portfolioCardDescription img {
+  max-width: 80px;
+  max-height: 80px;
+  margin-bottom: 5px;
+}
+
+.portfolioCardText {
   color: var(--colore-uno);
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   max-width: calc(100% - 30px);
 }
@@ -599,74 +612,8 @@ h3 {
   color: var(--colore-due);
 }
 
-/*Portfolio*/
-.portfolio {
-  background-color: var(--colore-quattro);
-  height: 100vh;
-  width: 100%;
-  align-self: center;
-  border: 1px solid black;
-}
-
-.portfolio h1 {
-  color: var(--colore-quattro);
-  font-size: 80px;
-  font-weight: bold;
-}
-
-.portfolio h2 {
-  color: var(--colore-uno);
-  font-size: 60px;
-  font-weight: bold;
-}
-
-.portfolio h3 {
-  color: var(--colore-due);
-  font-size: 45px;
-  font-weight: bold;
-}
-
-.portfolio p {
-  color: var(--colore-uno);
-  font-size: 20px;
-  font-weight: normal;
-  margin-bottom: 5px;
-}
-
-.portfoliocontenuto {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: no-wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  border: 1px solid black;
-}
-
-.portfolioimg {
-  height: auto;
-  position: relative;
-  top: 2vh;
-  left: 5vw;
-  flex: 1 1 25%;
-}
-
-.portfolio img {
-  height: auto;
-  width: 300px;
-}
-
-.portfoliotxt {
-  height: auto;
-  margin-left: 2vw;
-  margin-right: 2vw;
-  margin-top: 2vh;
-  flex: 1 1 75%;
-}
-
 .contatti {
-  background-color: var(--colore-uno);
+  background-color: var(--colore-quattro);
   height: 100vh;
   width: 100%;
   align-self: center;
@@ -680,7 +627,7 @@ h3 {
 }
 
 .contatti h2 {
-  color: var(--colore-quattro);
+  color: var(--colore-uno);
   font-size: 60px;
   font-weight: bold;
 }
@@ -693,15 +640,13 @@ h3 {
 
 .contatti h4 {
   color: var(--colore-uno);
-  background-color: var(--colore-due);
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
-  margin-top: 15px;
 }
 
 .contatti p {
-  color: var(--colore-tre);
+  color: var(--colore-uno);
   font-size: 20px;
   font-weight: normal;
   margin-bottom: 5px;
@@ -753,7 +698,7 @@ h3 {
 }
 
 .contatti-txt img {
-  opacity: 0.5;
+  opacity: 0.8;
   margin-left: auto;
   margin-right: auto;
   max-width: 150px;
@@ -790,6 +735,7 @@ h3 {
   font-size: 40px;
   text-align: center;
   text-decoration: none;
+  color: var(--colore-uno);
 }
 
 .socialicons .fab:hover {
@@ -798,7 +744,7 @@ h3 {
 }
 
 .form-label {
-  color: var(--colore-due);
+  color: var(--colore-uno);
 }
 
 .form-button {
