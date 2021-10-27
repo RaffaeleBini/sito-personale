@@ -20,6 +20,7 @@
     <script src="https://kit.fontawesome.com/6e9c6b0278.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script>
+    
     <script>
       var i = 0;
       var txt = 'RAFFAELE BINI';
@@ -33,6 +34,7 @@
         }
       }
     </script>
+
     <script>
       $(function() {
         $.scrollify({
@@ -40,41 +42,40 @@
         });
       });
     </script>
+
     <script>
       function openNav() {
-        document.getElementById("navbar").style.width = "250px";
-        document.getElementById("body").style.marginLeft = "250px";
+        document.getElementById("navbar").style.width = "100%";
       }
-      
+  
       function closeNav() {
-        document.getElementById("navbar").style.width = "0";
-        document.getElementById("body").style.marginLeft= "0";
+        document.getElementById("navbar").style.width = "0%";
       }
     </script>
+
     
   </head>
 
   <!--Creo il body come contenitore di tutte le sezioni del sito -->
-  <body onload="typeWriter(); openExperience(event, 'otto')" id="body" class="body">
+  <body onload="typeWriter()" id="body" class="body">
 
   <!-- Menu di navigazione -->
   <header id="header" class="header">
     <nav id="navbar" class="navbar">
-      <button class="closebtn" onclick="closeNav()">x</button>
+      <button class="closebtn" onclick="closeNav()">&times;</button>
         <ul id="menulist" class="menulist">
         <!-- <ul class="nav-links"> -->   
-          <li class="menuelement"><a href=#home class="is-active">Home</a></li>
-          <li class="menuelement"><a href=#sudime>Su di Me</a></li>
-          <li class="menuelement"><a href=#formazione>Formazione</a></li>
-          <li class="menuelement"><a href=#esperienza>Esperienza</a></li>
-          <li class="menuelement"><a href=#skills>Skills</a></li>
-          <li class="menuelement"><a href=#portfolio>Portfolio</a></li>
-          <li class="menuelement"><a href=#contatti>Contatti</a></li>
+          <li class="menuelement"><a href=#home onclick="closeNav()" class="active">HOME</a></li>
+          <li class="menuelement"><a href=#sudime onclick="closeNav()">SU DI ME</a></li>
+          <li class="menuelement"><a href=#formazione onclick="closeNav()">FORMAZIONE</a></li>
+          <li class="menuelement"><a href=#esperienza onclick="closeNav()">ESPERIENZA</a></li>
+          <li class="menuelement"><a href=#portfolio onclick="closeNav()">PORTFOLIO</a></li>
+          <li class="menuelement"><a href=#contatti onclick="closeNav()">CONTATTI</a></li>
         </ul>
     </nav>
     <button class="openbtn" onclick="openNav()">☰</button>
   </header>
-
+  
   <!--Trasformo l'header in un contenitore per flexbox-->
   <section id="home" class="home scroll">
     <!--Creo un sottocontainer per strutturare il titolo e l'intestazione-->  
@@ -107,15 +108,19 @@
     <div id="sudimecontenuto" class="sudimecontenuto">
       <div id="sudimeimg" class="sudimeimg">
         <img src="./assets/img/fotobn.jpg">
-        <img style="opacity: 0.8" src="assets/img/boxe02.png">
       </div>
       <div id="sudimetxt" class="sudimetxt">
         <p>La mia storia inizia il <b>1 Ottobre del 1978</b> a <b>Firenze</b>. Sono nato - forse dovrei scrivere «siamo», perché ero in compagnia di mio fratello gemello! - in una domenica  di pioggia, come raccontano i miei genitori (che non sapevano che eravamo in due!).</p>
+        <br>
         <p>Sono cresciuto mangiando in abbondanza tutte le cose buone che cucinava la nonna e tanti biscotti e ovetti di cioccolata; mi piaceva andare a scuola, esplorare i dintorni di casa con la bicicletta, costruire mondi con i lego, scavare gallerie sotterranee e ammassare terra creando percorsi per le macchinine, guardare i cartoni animati giapponesi, attaccare le figurine panini e disegnare con le matite colorate.</p>
+        <br>
         <p>Da bambino volevo fare il pompiere, l’inventore, lo scienziato, il disegnatore di automobili. Da grande sono diventato Ingegnere e, con il tempo, ho capito di avere un’indole <b>«multipotenziale»</b>: una persona che ha tanti interessi, ha svolto tanti lavori e che grazie a questo intreccio di conoscenze e passioni sviluppa un potenziale multidisciplinare che applica in qualsiasi lavoro o sfida quotidiana.</p>
+        <br>
         <p>Il <b>Liceo Classico</b> mi ha insegnato  la Bellezza, il Pensiero Indipendente, il valore della Diversità, la Meraviglia e l’amore per il Sapere. Nella <b>Facoltà di Ingegneria</b> ho imparato che i risultati si ottengono rimboccandosi le maniche e lavorando con metodo e dedizione, che non è  importante non cadere mai al tappeto, ma avere la forza di rialzarsi ogni volta e che la chiave per arrivare in fondo è nel credere in se stessi. </p>     
+        <br>
         <p>Sono curioso, generoso, riflessivo e calmo; sono un «buono», ma non fatemi arrabbiare.</p>
         <p>Credo nell’<b>Etica</b>, nell’<b>Onestà</b> e nel <b>Rispetto</b>.</p>
+        <br>
         <p>Mi piace fare lunghe camminate e fischiettare: ho un approccio positivo alla vita e ho imparato a ricercare la felicità in ogni momento ed in ogni piccola cosa.</p>
         <p>Nel tempo libero pratico la boxe a livello amatoriale, mi dedico ad attività creative, faccio esperimenti in cucina ed adoro immergermi nella lettura di ogni genere.</p>
       </div>  
@@ -210,6 +215,15 @@
       <div id="altraformazione" class="formazionetxt">
         <h4>FORMAZIONE COMPLEMENTARE</h4>
         <br>
+        <div class="featureListItem">
+          <div class="featureListItemIcon">
+            <div class="icon fa fa-linkedin" style="color: #F8E028;"></div>
+          </div>
+          <div>
+          <p><b>2021 PERSONAL BRANDING SU LINKEDIN</b></p>
+          <p>Start2Impact</p>
+          </div>
+        </div>
         <div class="featureListItem">
           <div class="featureListItemIcon">
             <div class="icon fa fa-google" style="color: #F8E028;"></div>
@@ -395,23 +409,23 @@
   </section>
   <!--Fine Esperienza.-->
 
-  <!--Skills: pagina con capacità e competenze-->
-  <section id="skills" class="sectioncontainer skills scroll">
-    <div id="skillstitolo" class="titolo">
-      <h2>Skills</h2>
+  <!--Portfolio-->
+  <section id="portfolio" class="sectioncontainer portfolio scroll">
+    <div id="portfoliotitolo" class="titolo">
+      <h2>Portfolio</h2>
     </div>  
-    <div id="skillssottotitolo" class="titolo">
+    <div id="portfoliosottotitolo" class="titolo">
         <h3>Coltivo Sogni ed uso la Bellezza per trasformarli in Realtà e contribuire alla Transizione Ecologica e Digitale</h3>
     </div> 
     <div id="linea" class="linea"></div>
-    <div id="skillscontenuto" class="skillscontenuto">
-      <div id="skillstxt" class="skillstxt">
+    <div id="portfoliocontenuto" class="portfoliocontenuto">
+      <div id="portfoliotxt" class="portfoliotxt">
         
-        <div id="softskillsbox" class="skillbox">
-          <div class="skillcardtitle">
-            <div class="skillCardDescription">
-              <div class="icon fas fa-laptop-code" style="font-size: 50px;"></div>
-              <div class="skillCardText">Sviluppo Web</div>
+        <div id="portfoliobox" class="portfoliobox">
+          <div class="portfoliocardtitle">
+            <div class="portfolioCardDescription">
+              <div class="icon fas fa-laptop-code"></div>
+              <div class="portfolioCardText">Sviluppo Web</div>
             </div>
             <div class="stelline">
               <span class="fa fa-star checked"></span>
@@ -421,31 +435,31 @@
               <span class="fa fa-star"></span>
             </div>
           </div>
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fa fa-html5" style="font-size: 50px;"></div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fa fa-html5"></div>
               <div class="skillCardText">HTML</div>
             </div>
           </div>  
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fa fa-css3" style="font-size: 50px;"></div>
-              <div class="skillCardText">CSS</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fa fa-css3"></div>
+              <div class="portfolioCardText">CSS</div>
             </div>
           </div>  
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fab fa-js" style="font-size: 50px;"></div>
-              <div class="skillCardText">Javascript</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-js"></div>
+              <div class="portfolioCardText">Javascript</div>
             </div>
           </div>       
         </div>
 
-        <div id="softskillsbox" class="skillbox">
-          <div class="skillcardtitle">
-            <div class="skillCardDescription">
-              <div class="icon far fa-file-code" style="font-size: 50px;"></div>
-              <div class="skillCardText">Coding</div>
+        <div id="portfoliobox" class="portfoliobox">
+          <div class="portfoliocardtitle">
+            <div class="portfolioCardDescription">
+              <div class="icon far fa-file-code"></div>
+              <div class="portfolioCardText">Coding</div>
             </div>
             <div class="stelline">
               <span class="fa fa-star checked"></span>
@@ -455,31 +469,31 @@
               <span class="fa fa-star"></span>
             </div>
           </div>
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fab fa-python" style="font-size: 50px;"></div>
-              <div class="skillCardText">Python</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-python"></div>
+              <div class="portfolioCardText">Python</div>
             </div>
           </div>  
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fab fa-php" style="font-size: 50px;"></div>
-              <div class="skillCardText">PHP</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-php"></div>
+              <div class="portfolioCardText">PHP</div>
             </div>
           </div>  
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fas fa-database" style="font-size: 50px;"></div>
-              <div class="skillCardText">SQL</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fas fa-database"></div>
+              <div class="portfolioCardText">SQL</div>
             </div>
           </div>       
         </div>
 
-        <div id="softskillsbox" class="skillbox">
-          <div class="skillcardtitle">
-            <div class="skillCardDescription">
-              <div class="icon fas fa-users" style="font-size: 50px;"></div>
-              <div class="skillCardText">Social Media</div>
+        <div id="portfoliobox" class="portfoliobox">
+          <div class="portfoliocardtitle">
+            <div class="portfolioCardDescription">
+              <div class="icon fas fa-users"></div>
+              <div class="portfolioCardText">Social Media</div>
             </div>
             <div class="stelline">
               <span class="fa fa-star checked"></span>
@@ -489,31 +503,31 @@
               <span class="fa fa-star checked"></span>
             </div>
           </div>
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fab fa-linkedin" style="font-size: 50px;"></div>
-              <div class="skillCardText">Linkedin</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-linkedin"></div>
+              <div class="portfolioCardText">Linkedin</div>
             </div>
           </div>  
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fab fa-instagram-square" style="font-size: 50px;"></div>
-              <div class="skillCardText">Instagram</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-instagram-square"></div>
+              <div class="portfolioCardText">Instagram</div>
             </div>
           </div>  
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fab fa-facebook-square" style="font-size: 50px;"></div>
-              <div class="skillCardText">Facebook</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-facebook-square"></div>
+              <div class="portfolioCardText">Facebook</div>
             </div>
           </div>       
         </div>
 
-        <div id="softskillsbox" class="skillbox">
-          <div class="skillcardtitle">
-            <div class="skillCardDescription">
-              <div class="icon fas fa-palette" style="font-size: 50px;"></div>
-              <div class="skillCardText">Graphic Design</div>
+        <div id="portfoliobox" class="portfoliobox">
+          <div class="portfoliocardtitle">
+            <div class="portfolioCardDescription">
+              <div class="icon fas fa-palette"></div>
+              <div class="portfolioCardText">Graphic</div>
             </div>
             <div class="stelline">
               <span class="fa fa-star checked"></span>
@@ -523,36 +537,70 @@
               <span class="fa fa-star"></span>
             </div>
           </div>
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fab fa-linkedin" style="font-size: 50px;"></div>
-              <div class="skillCardText">Lightroom</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-linkedin"></div>
+              <div class="portfolioCardText">Lightroom</div>
             </div>
           </div>  
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fab fa-instagram-square" style="font-size: 50px;"></div>
-              <div class="skillCardText">Inkscape</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-instagram-square"></div>
+              <div class="portfolioCardText">Inkscape</div>
             </div>
           </div>  
-          <div class="skillcard">
-            <div class="skillCardDescription">
-              <div class="icon fab fa-facebook-square" style="font-size: 50px;"></div>
-              <div class="skillCardText">Photoshop</div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-facebook-square"></div>
+              <div class="portfolioCardText">Photoshop</div>
+            </div>
+          </div>       
+        </div>
+
+        <div id="portfoliobox" class="portfoliobox">
+          <div class="portfoliocardtitle">
+            <div class="portfolioCardDescription">
+              <div class="icon fas fa-industry"></div>
+              <div class="portfolioCardText">Industry 4.0</div>
+            </div>
+            <div class="stelline">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-linkedin"></div>
+              <div class="portfolioCardText">IoT</div>
+            </div>
+          </div>  
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-instagram-square"></div>
+              <div class="portfolioCardText">AI</div>
+            </div>
+          </div>  
+          <div class="portfoliocard">
+            <div class="portfolioCardDescription">
+              <div class="icon fab fa-facebook-square"></div>
+              <div class="portfolioCardText">Photoshop</div>
             </div>
           </div>       
         </div>
 
       </div>
       
-      <div id="skillstxthard" class="skillstxt">
-        <h4>HARD SKILLS</h4>
+      <div id="portfoliostxthard" class="portfoliostxt">
+        <h4>PORTFOLIO</h4>
         
-        <div id="hardskillsbox" class="skillbox">
-        <div class="skillcard">
-          <div class="skillCardDescription">
+        <div id="portfoliobox" class="portfoliobox">
+        <div class="portfoliocard">
+          <div class="portfolioCardDescription">
             <div class="icon fa fa-html5" style="font-size: 50px;"></div>
-            <div class="skillCardText">HTML 5</div>
+            <div class="portfolioCardText">HTML 5</div>
           </div>
           <div class="stelline">
             <span class="fa fa-star checked"></span>
@@ -563,10 +611,10 @@
           </div>
         </div>
 
-        <div class="skillcard">
-          <div class="skillCardDescription">
+        <div class="portfoliocard">
+          <div class="portfolioCardDescription">
             <div class="icon fa fa-css3" style="font-size: 50px;"></div>
-            <div class="skillCardText">CSS</div>
+            <div class="portfolioCardText">CSS</div>
           </div>
           <div class="stelline">
             <span class="fa fa-star checked"></span>
@@ -577,10 +625,10 @@
           </div>
         </div>
 
-        <div class="skillcard">
-          <div class="skillCardDescription">
+        <div class="portfoliocard">
+          <div class="portfolioCardDescription">
             <div class="icon fab fa-js" style="font-size: 50px;"></div>
-            <div class="skillCardText">Javascript</div>
+            <div class="portfolioCardText">Javascript</div>
           </div>
           <div class="stelline">
             <span class="fa fa-star checked"></span>
@@ -591,10 +639,10 @@
           </div>
         </div>
 
-        <div class="skillcard">
-          <div class="skillCardDescription">
+        <div class="portfoliocard">
+          <div class="portfolioCardDescription">
             <div class="icon fab fa-python" style="font-size: 50px;"></div>
-            <div class="skillCardText">Python</div>
+            <div class="portfolioCardText">Python</div>
           </div>
           <div class="stelline">
             <span class="fa fa-star checked"></span>
@@ -605,10 +653,10 @@
           </div>
         </div>
 
-        <div class="skillcard">
-          <div class="skillCardDescription">
+        <div class="portfoliocard">
+          <div class="portfolioCardDescription">
             <div class="fas fa-drafting-compass" style="font-size: 50px;"></div>
-            <div class="skillCardText">Autocad</div>
+            <div class="portfolioCardText">Autocad</div>
           </div>
           <div class="stelline">
             <span class="fa fa-star checked"></span>
@@ -619,10 +667,10 @@
           </div>
         </div>
 
-        <div class="skillcard">
-          <div class="skillCardDescription">
-            <div class="icon fas fa-signal" style="font-size: 50px;"></div>
-            <div class="skillCardText">Minitab</div>
+        <div class="portfoliocard">
+          <div class="portfolioCardDescription">
+            <div class="icon fas fa-signal" style="font-size: 50px;">&#127470 &#127481</div>
+            <div class="portfolioCardText">&#127470</div>
           </div>
           <div class="stelline">
             <span class="fa fa-star checked"></span>
@@ -633,10 +681,10 @@
           </div>
         </div>
 
-        <div class="skillcard">
-          <div class="skillCardDescription">
+        <div class="portfoliocard">
+          <div class="portfolioCardDescription">
             <div class="icon fa fa-google" style="font-size: 50px;"></div>
-            <div class="skillCardText">G Suite</div>
+            <div class="portfolioCardText">G Suite</div>
           </div>
           <div class="stelline">
             <span class="fa fa-star checked"></span>
@@ -647,10 +695,10 @@
           </div>
         </div>
 
-        <div class="skillcard">
-          <div class="skillCardDescription">
+        <div class="portfoliocard">
+          <div class="portfolioCardDescription">
             <div class="icon fab fa-microsoft" style="font-size: 50px;"></div>
-            <div class="skillCardText">MS Office</div>
+            <div class="portfolioCardText">MS Office</div>
           </div>
           <div class="stelline">
             <span class="fa fa-star checked"></span>
@@ -661,10 +709,10 @@
           </div>
         </div>
 
-        <div class="skillcard">
-          <div class="skillCardDescription">
+        <div class="portfoliocard">
+          <div class="portfolioCardDescription">
             <div class="icon fab fa-apple" style="font-size: 50px;"></div>
-            <div class="skillCardText">Mac OS</div>
+            <div class="portfolioCardText">Mac OS</div>
           </div>
           <div class="stelline">
             <span class="fa fa-star checked"></span>
@@ -675,10 +723,10 @@
           </div>
         </div>
 
-        <div class="skillcard">
-          <div class="skillCardDescription">
+        <div class="portfoliocard">
+          <div class="portfolioCardDescription">
             <div class="icon far fa-thumbs-up" style="font-size: 50px;"></div>
-            <div class="skillCardText">Social</div>
+            <div class="portfolioCardText">Social</div>
           </div>
           <div class="stelline">
             <span class="fa fa-star checked"></span>
@@ -694,23 +742,8 @@
             
     </div>
   </section>
-  <!--Fine Skills-->
+  <!--Fine Portfolio-->
 
-  <!--Portfolio-->
-  <section id="portfolio" class="sectioncontainer portfolio scroll">
-    <div id="portfoliotitolo" class="titolo">
-      <h2>Portfolio</h2>
-    </div>  
-    <div id="portfoliosottotitolo" class="titolo">
-        <h3>Coltivo Sogni ed uso la Bellezza per trasformarli in Realtà e contribuire alla Transizione Ecologica e Digitale</h3>
-    </div> 
-    <div id="linea" class="linea"></div>
-    <div id="portfoliocontenuto" class="portfoliocontenuto">
-      
-    </div>
-  </section>
-  <!--Fine portfolio-->
-  
   <!--Contatti-->
   <section id="contatti" class="sectioncontainer contatti scroll">
     <div id="contattititolo" class="titolo">
@@ -725,7 +758,7 @@
       <div id="contattisx" class="contatticolonna">
         <div id="contatti-card" class="contatti-card">
           <div id="contatti-txt" class="contatti-txt">
-            <h3>Raffaele Bini</h3>
+            <h4>Raffaele Bini</h4>
             <br>
             <img src="assets/img/foto.jpg" style="opacity: 0,6;">
             <br>
