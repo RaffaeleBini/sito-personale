@@ -12,34 +12,15 @@
   font-family: "Glory", sans-serif;
 }
 
-p, ul, li {
-  font-size: 16px;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 36px;
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 28px;
-  line-height: 1.2;
-}
-
-h3 {
-  font-size: 20px;
-  line-height: 1.2;
-}
-
 .body {
   width: 100%;
   height: 100%;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background-color: var(--colore-uno);
+  /*background-color: var(--colore-uno);*/
 }
 
 /*PRELOADER*/
@@ -62,7 +43,7 @@ h3 {
   width: 50vw;
   text-align: center;
   color: var(--colore-quattro);
-  font-size: 80px;
+  font-size: 5em;
   font-weight: bold;
   z-index: 999993;
 }
@@ -99,7 +80,7 @@ h3 {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 40px;
+  font-size: 3em;
   cursor: pointer;
   background-color: transparent;
   color: var(--colore-due);
@@ -111,7 +92,7 @@ h3 {
   position:fixed;
   left: 10px;
   top: 10px;
-  font-size: 28px;
+  font-size: 2em;
   cursor: pointer;
   background-color: transparent;
   color: var(--colore-due);
@@ -146,6 +127,7 @@ h3 {
   transition: 0.3s;
   }
 
+/*HOME*/
 .scroll {
   width: 100%;
 }
@@ -180,19 +162,19 @@ h3 {
 
 .home h1 {
   color: var(--colore-quattro);
-  font-size: 80px;
+  font-size: 5em;
   font-weight: bold;
 }
 
 .home h2 {
   color: var(--colore-due);
-  font-size: 60px;
+  font-size: 4em;
   font-weight: bold;
 }
 
 .home p {
   color: var(--colore-tre);
-  font-size: 30px;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -209,7 +191,8 @@ h3 {
   overflow: hidden;
 }
 
-.sudime {
+/*TEMA CHIARO*/
+.temachiaro {
   background-color: var(--colore-quattro);
   height: 100vh;
   width: 100%;
@@ -217,31 +200,85 @@ h3 {
   border: 1px solid black;
 }
 
-.sudime h1 {
+.temachiaro h1 {
   color: var(--colore-quattro);
-  font-size: 80px;
+  font-size: 5em;
   font-weight: bold;
 }
 
-.sudime h2 {
+.temachiaro h2 {
   color: var(--colore-uno);
-  font-size: 60px;
+  font-size: 3.5em;
   font-weight: bold;
 }
 
-.sudime h3 {
+.temachiaro h3 {
   color: var(--colore-due);
-  font-size: 45px;
+  font-size: 2.5em;
   font-weight: bold;
 }
 
-.sudime p {
+.temachiaro h4 {
   color: var(--colore-uno);
-  font-size: 20px;
+  background-color: var(--colore-due);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.temachiaro p {
+  color: var(--colore-uno);
+  font-size: 1em;
   font-weight: normal;
   margin-bottom: 5px;
 }
 
+/*TEMA SCURO*/
+.temascuro {
+  background-color: var(--colore-uno);
+  height: 100vh;
+  width: 100%;
+  align-self: center;
+  border: 1px solid black;
+}
+
+.temascuro h1 {
+  color: var(--colore-quattro);
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.temascuro h2 {
+  color: var(--colore-quattro);
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+.temascuro h3 {
+  color: var(--colore-due);
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.temascuro h4 {
+  color: var(--colore-uno);
+  background-color: var(--colore-due);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.temascuro p {
+  color: var(--colore-tre);
+  font-size: 1em;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/*SU DI ME*/
 .sudimecontenuto {
   width: 100%;
   height: 80%;
@@ -260,7 +297,7 @@ h3 {
   flex: 1 1 25%;
 }
 
-.sudime img {
+.sudimeimg img {
   height: auto;
   width: 300px;
   max-width: 90%;
@@ -274,49 +311,7 @@ h3 {
   flex: 1 1 75%;
 }
 
-.formazione {
-  background-color: var(--colore-uno);
-  height: 100vh;
-  width: 100%;
-  align-self: center;
-  border: 1px solid black;
-}
-
-.formazione h1 {
-  color: var(--colore-quattro);
-  font-size: 80px;
-  font-weight: bold;
-}
-
-.formazione h2 {
-  color: var(--colore-quattro);
-  font-size: 60px;
-  font-weight: bold;
-}
-
-.formazione h3 {
-  color: var(--colore-due);
-  font-size: 45px;
-  font-weight: bold;
-}
-
-.formazione h4 {
-  color: var(--colore-uno);
-  background-color: var(--colore-due);
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 15px;
-}
-
-.formazione p {
-  color: var(--colore-tre);
-  font-size: 16px;
-  font-weight: normal;
-  text-align: center;
-  margin-bottom: 5px;
-}
-
+/*FORMAZIONE*/
 .formazionecontenuto {
   width: 100%;
   height: 80%;
@@ -337,7 +332,7 @@ h3 {
   flex: 1 1 30%;
 }
 
-/*LISTA*/
+/*LISTA CORSI*/
 .featureListItem {
   display: flex;
   align-items: center;
@@ -358,49 +353,7 @@ h3 {
   line-height: 0;
 }
 
-/*Standardizzare un tipo per sudime ed esperienza?*/
-.esperienza {
-  background-color: var(--colore-quattro);
-  height: 100vh;
-  width: 100%;
-  align-self: center;
-  border: 1px solid black;
-}
-
-.esperienza h1 {
-  color: var(--colore-quattro);
-  font-size: 80px;
-  font-weight: bold;
-}
-
-.esperienza h2 {
-  color: var(--colore-uno);
-  font-size: 60px;
-  font-weight: bold;
-}
-
-.esperienza h3 {
-  color: var(--colore-due);
-  font-size: 45px;
-  font-weight: bold;
-}
-
-.esperienza h4 {
-  color: var(--colore-uno);
-  background-color: var(--colore-due);
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 15px;
-}
-
-.esperienza p {
-  color: var(--colore-uno);
-  font-size: 20px;
-  font-weight: normal;
-  margin-bottom: 5px;
-}
-
+/*ESPERIENZA*/
 .esperienzacontenuto {
   width: 100%;
   height: 80%;
@@ -421,32 +374,67 @@ h3 {
   /*flex: 1 1 75%;*/
 }
 
-.resumeitem {
+.resumecontainer {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-left: -10vw;
+  /*padding: 16px;*/
+  color:  var(--colore-uno);
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  color: var(--colore-due);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+/*.resumeitem {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
   overflow-y: auto;
-  /*max-width: 400px;*/
+  /*max-width: 400px;
   padding: 10px;
   scrollbar-width: thin;
   scrollbar-gutter: stable;
   scrollbar-color: var(--colore-due);
-}
-
-/*LISTA*/
-.resumeListItem {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 90%;
-  /*max-width: 400px;*/
-  padding: 10px;
-}
-
-.resumeListItem + .resumeListItem {
-  border-top: 1px solid #D7DBDD;
-}
+}*/
 
 .resumeListItemIcon {
   width: 100px;
@@ -456,58 +444,38 @@ h3 {
 }
 
 .resumeListItemtxt {
-  width: 30vw;
+  width: 50vw;
+  height: 50vh;
+}
+
+/* The dots/bullets/indicators */
+.dotpos {
+  align-self: center;
+  margin-bottom: 2px;
+} 
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--colore-tre);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: var(--colore-uno);
 }
 
 
 /*portfolio*/
-.portfolio {
-  background-color: var(--colore-uno);
-  height: 100vh;
-  width: 100%;
-  align-self: center;
-  border: 1px solid black;
-}
-
-.portfolio h1 {
-  color: var(--colore-quattro);
-  font-size: 80px;
-  font-weight: bold;
-}
-
-.portfolio h2 {
-  color: var(--colore-quattro);
-  font-size: 60px;
-  font-weight: bold;
-}
-
-.portfolio h3 {
-  color: var(--colore-due);
-  font-size: 45px;
-  font-weight: bold;
-}
-
-.portfolio h4 {
-  color: var(--colore-uno);
-  background-color: var(--colore-due);
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 15px;
-}
-
-.portfolio p {
-  color: var(--colore-tre);
-  font-size: 20px;
-  font-weight: normal;
-  margin-bottom: 5px;
-}
-
 .portfoliocontenuto {
   width: 100%;
   height: 80%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: no-wrap;
   align-items: flex-start;
   justify-content: center;
@@ -516,12 +484,16 @@ h3 {
 }
 
 .portfoliotxt {
-  height: 45%;
-  width: 30%;
+  height: auto;
+ /* width: 30%;*/
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 2vh;
-  flex: 0 0 40%;
+  /*flex: 0 0 40%;*/
+}
+
+.pslides {
+  display: none;
 }
 
 /*.skills img {
@@ -530,7 +502,7 @@ h3 {
   margin-top: 2vh;
 }*/
 
-.portfoliobox {
+/*.portfoliobox {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -539,11 +511,10 @@ h3 {
   overflow: hidden;
   border: 1px solid var(--colore-due);
   margin-bottom: 5px;
-}
+}*/
 
 /*card*/
-
-.portfoliocardtitle {
+/*.portfoliocardtitle {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -575,7 +546,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*padding: 5px 0;*/
+  /*padding: 5px 0;
 }
 
 .icon {
@@ -597,7 +568,7 @@ h3 {
 
 .stelline {
   text-align: center;
-  padding: 5px /*15px*/;
+  padding: 5px 15px;
   border-top: 1px solid var(--colore-due);
   background-color: var(--colore-uno);
 }
@@ -609,48 +580,9 @@ h3 {
 
 .checked {
   color: var(--colore-due);
-}
+}*/
 
-.contatti {
-  background-color: var(--colore-quattro);
-  height: 100vh;
-  width: 100%;
-  align-self: center;
-  border: 1px solid black;
-}
-
-.contatti h1 {
-  color: var(--colore-quattro);
-  font-size: 80px;
-  font-weight: bold;
-}
-
-.contatti h2 {
-  color: var(--colore-uno);
-  font-size: 60px;
-  font-weight: bold;
-}
-
-.contatti h3 {
-  color: var(--colore-due);
-  font-size: 45px;
-  font-weight: bold;
-}
-
-.contatti h4 {
-  color: var(--colore-uno);
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.contatti p {
-  color: var(--colore-uno);
-  font-size: 20px;
-  font-weight: normal;
-  margin-bottom: 5px;
-}
-
+/*CONTATTI*/
 .contatticontenuto {
   width: 100%;
   height: 80%;
