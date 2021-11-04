@@ -61,11 +61,69 @@
       }
     </script>
 
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+  
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+  
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+  
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+
+      <script>
+        var pslideIndex = 1;
+        pshowSlides(pslideIndex);
+
+        function pplusSlides(n) {
+          pshowSlides(pslideIndex += n);
+        }
+
+        function pcurrentSlide(n) {
+          pshowSlides(pslideIndex = n);
+        }
+
+        function pshowSlides(n) {
+          var i;
+          var pslides = document.getElementsByClassName("pslides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > pslides.length) {pslideIndex = 1}    
+          if (n < 1) {pslideIndex = pslides.length}
+          for (i = 0; i < pslides.length; i++) {
+              pslides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          pslides[pslideIndex-1].style.display = "block";  
+          dots[pslideIndex-1].className += " active";
+        }
+        </script>
+
     
   </head>
 
   <!--Creo il body come contenitore di tutte le sezioni del sito -->
-  <body onload="typeWriter()" id="body" class="body">
+  <body onload="typeWriter(); plusSlides(0)" id="body" class="body">
 
   <div id="overlayer"></div>
   <div class="preloader">
@@ -110,7 +168,7 @@
   </section>
   
   <!--Su di me: pagina con descrizione personale-->
-  <section id="sudime" class="sectioncontainer sudime scroll">
+  <section id="sudime" class="sectioncontainer temachiaro scroll">
     <div id="sudimetitolo" class="titolo">
       <h2>Su di me</h2>
     </div>  
@@ -142,7 +200,7 @@
   <!--Fine Su di me-->
 
   <!--Formazione: pagina con percorso formativo-->
-  <section id="formazione" class="sectioncontainer formazione scroll">
+  <section id="formazione" class="sectioncontainer temascuro scroll">
     <div id="formazionetitolo" class="titolo">
       <h2>Formazione</h2>
     </div>  
@@ -280,7 +338,7 @@
   <!--Fine Formazione. DA INSERIRE GRAFICO SU AMBITI FORMAZIONE-->
 
    <!--Esperienza: pagina con percorso lavorativo-->
-  <section id="esperienza" class="sectioncontainer esperienza scroll">
+  <section id="esperienza" class="sectioncontainer temachiaro scroll">
     <div id="esperienzatitolo" class="titolo">
       <h2>Esperienza</h2>
     </div>  
@@ -293,137 +351,168 @@
         <p>Nel mio percorso professionale ho avuto l’opportunità di lavorare in luoghi ed ambiti diversi: grazie a queste esperienze ed ai colleghi che mi hanno aiutato a crescere, ho imparato che il segreto per raggiungere qualsiasi risultato è investire nel benessere e nella crescita delle Persone e creare un Ambiente di Lavoro che generi la passione per la propria mansione.</p>
       </div>
       
-      <div id="resume" class="resumeitem">
-        <div class="resumeListItem">
-          <div class="resumeListItemIcon">
-            <div class="icon fas fa-industry" style="color: #F8E028;"></div>
-          </div>
-          <div class="resumeListItemtxt">
-            <p><b>2018 -  | PRODUCTION MANAGER</b></p>
-            <p>Illycaffé</p>
-          </div>
-          <div>
-            <p>Gestione ed organizzazione della produzione dei prodotti porzionati</p>
-            <p>Gestione della manutenzione degli impianti produttivi</p>
-            <p>Gestione di Qualità, Sicurezza ed Ambiente</p>
-            <p>Gestione e sviluppo del personale di reparto</p>
-            <p>Supporto allo sviluppo ed industrializzazione di nuovi prodotti</p>
-          </div>
-        </div>
-        <div class="resumeListItem">
-          <div class="resumeListItemIcon">
-            <div class="icon fas fa-cogs" style="color: #F8E028;"></div>
-          </div>
-          <div class="resumeListItemtxt">
-          <p><b>2016 - 2018 | ENGINEERING MANAGER</b></p>
-          <p>Gruppo Sanpellegrino</p>
-          </div>
-          <div>
-            <p>Gestione di Investimenti e Progetti</p>
-            <p>Gestione della Manutenzione degli impianti produttivi, ausiliari e fabbricati</p>
-            <p>Sviluppo delle persone e delle competenze tecniche</p>
-            <p>Miglioramento delle Performances di Stabilimento</p>
-            <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
-            <p>Gestione dell'Energia</p>
+      <div id="resumecontainer" class="resumecontainer">
+
+        <div class="slides fade">
+          <div id="resume" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-industry" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>2018 -  | PRODUCTION MANAGER</h4>
+              <h4>Illycaffé</h4>
+              <br>
+              <p>Gestione ed organizzazione della produzione dei prodotti porzionati</p>
+              <p>Gestione della manutenzione degli impianti produttivi</p>
+              <p>Gestione di Qualità, Sicurezza ed Ambiente</p>
+              <p>Gestione e sviluppo del personale di reparto</p>
+              <p>Supporto allo sviluppo ed industrializzazione di nuovi prodotti</p>
+            </div>
           </div>
         </div>
-        <div class="resumeListItem">
-          <div class="resumeListItemIcon">
-            <div class="icon fas fa-tachometer-alt" style="color: #F8E028;"></div>
+
+        <div class="slides fade">
+          <div id="resume" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-cogs" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>2016 - 2018 | ENGINEERING MANAGER @ Gruppo Sanpellegrino</h4>
+              <br>
+              <p>Gestione di Investimenti e Progetti</p>
+              <p>Gestione della Manutenzione degli impianti produttivi, ausiliari e fabbricati</p>
+              <p>Sviluppo delle persone e delle competenze tecniche</p>
+              <p>Miglioramento delle Performances di Stabilimento</p>
+              <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
+              <p>Gestione dell'Energia</p>
+            </div>
           </div>
-          <div class="resumeListItemtxt">
-          <p><b>2013 - 2016 | INDUSTRIAL PERFORMANCE MANAGER</b></p>
-          <p>Gruppo Sanpellegrino</p>
-          </div>
-          <div>
-            <p>Sviluppo dell'Operational Masterplan di stabilimento</p>
-            <p>Miglioramento Continuo attraverso gli strumenti di Lean Manufacturing, Kaizen e TPM</p>
-            <p>Sviluppo delle persone e delle competenze di Problem Solving</p>
-            <p>Ingegneria di Processo</p>
-          </div> 
         </div>
-        <div class="resumeListItem">
-          <div class="resumeListItemIcon">
-            <div class="icon fas fa-cogs" style="color: #F8E028;"></div>
+
+        <div class="slides fade">
+          <div id="resume" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-tachometer-alt" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>2013 - 2016 | INDUSTRIAL PERFORMANCE MANAGER</h4>
+              <p>Gruppo Sanpellegrino</p>
+              <br>
+              <p>Sviluppo dell'Operational Masterplan di stabilimento</p>
+              <p>Miglioramento Continuo attraverso gli strumenti di Lean Manufacturing, Kaizen e TPM</p>
+              <p>Sviluppo delle persone e delle competenze di Problem Solving</p>
+              <p>Ingegneria di Processo</p>
+            </div> 
           </div>
-          <div class="resumeListItemtxt">
-          <p><b>2011 - 2013 | ENGINEERING MANAGER</b></p>
-          <p>Gruppo Sanpellegrino</p>
-          </div>
-          <div>
-            <p>Gestione di Investimenti e Progetti</p>
-            <p>Gestione della Manutenzione degli impianti produttivi, ausiliari e fabbricati</p>
-            <p>Sviluppo delle persone e delle competenze tecniche</p>
-            <p>Miglioramento delle Performances di Stabilimento</p>
-            <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
-            <p>Gestione dell'Energia</p>
-          </div> 
         </div>
-        <div class="resumeListItem">
-          <div class="resumeListItemIcon">
-            <div class="icon fas fa-industry" style="color: #F8E028;"></div>
+
+        <div class="slides fade">
+          <div id="resume" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-cogs" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>2011 - 2013 | ENGINEERING MANAGER</h4>
+              <p>Gruppo Sanpellegrino</p>
+              <br>
+              <p>Gestione di Investimenti e Progetti</p>
+              <p>Gestione della Manutenzione degli impianti produttivi, ausiliari e fabbricati</p>
+              <p>Sviluppo delle persone e delle competenze tecniche</p>
+              <p>Miglioramento delle Performances di Stabilimento</p>
+              <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
+              <p>Gestione dell'Energia</p>
+            </div> 
           </div>
-          <div class="resumeListItemtxt">
-            <p><b>2010 - 2011 | PRODUCTION SUPERVISOR</b></p>
-            <p>Gruppo Sanpellegrino</p>
-          </div>
-          <div>
-            <p>Garantire la produzione nel rispetto della Qualità e dei tempi</p>
-            <p>Gestione delle persone</p>
-            <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
-            <p>Migliorare le performances di produzione</p>
-          </div> 
         </div>
-        <div class="resumeListItem">
-          <div class="resumeListItemIcon">
-            <div class="icon fas fa-flask" style="color: #F8E028;"></div>
+
+        <div class="slides fade">
+          <div id="resume" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-industry" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>2010 - 2011 | PRODUCTION SUPERVISOR</h4>
+              <p>Gruppo Sanpellegrino</p>
+              <br>
+              <p>Garantire la produzione nel rispetto della Qualità e dei tempi</p>
+              <p>Gestione delle persone</p>
+              <p>Garantire Sicurezza, Salute e rispetto dell'Ambiente</p>
+              <p>Migliorare le performances di produzione</p>
+            </div>
           </div>
-          <div class="resumeListItemtxt">
-            <p><b>2008 - 2010 | QUALITY & FOOD SAFETY SYSTEM MANAGER</b></p>
-            <p>Gruppo Sanpellegrino</p>
-          </div>
-          <div>
-            <p>Definizione ed implementazione del Sistema di Gestione della Qualità</p>
-            <p>Definizione ed implementazione del Sistema di Gestione della Sicurezza Alimentare</p>
-            <p>Coordinamento del processo di Certificazione ISO 22000</p>
-            <p>Coordinamento dei Sistemi di Gestione negli Stabilimenti</p>
-          </div> 
         </div>
-        <div class="resumeListItem">
-          <div class="resumeListItemIcon">
-            <div class="icon fa fa-tasks" style="color: #F8E028;"></div>
+
+        <div class="slides fade">
+          <div id="resume" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-flask" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>2008 - 2010 | QUALITY & FOOD SAFETY SYSTEM MANAGER @ Gruppo Sanpellegrino</h4>
+              <p>Gruppo Sanpellegrino</p>
+              <br>
+              <p>Definizione ed implementazione del Sistema di Gestione della Qualità</p>
+              <p>Definizione ed implementazione del Sistema di Gestione della Sicurezza Alimentare</p>
+              <p>Coordinamento del processo di Certificazione ISO 22000</p>
+              <p>Coordinamento dei Sistemi di Gestione negli Stabilimenti</p>
+            </div> 
           </div>
-          <div class="resumeListItemtxt">
-            <p><b>2005 - 2008 | PROJECT MANAGER</b></p>
-            <p>Gruppo Sanpellegrino</p>
-          </div>
-          <div>
-            <p>Mappatura dei Processi</p>
-            <p>Gestione dei Progetti di Business Excellence</p>
-            <p>Implementazione del sistema SAP in Produzione, Manutenzione, Qualità, Logistica e Pianificazione</p>
-          </div> 
         </div>
-        <div class="resumeListItem">
-          <div class="resumeListItemIcon">
-            <div class="icon fa fa-swimmer" style="color: #F8E028;"></div>
+
+        <div class="slides fade">
+          <div id="resume" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fa fa-tasks" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>2005 - 2008 | PROJECT MANAGER</h4>
+              <p>Gruppo Sanpellegrino</p>
+              <br>
+              <p>Mappatura dei Processi</p>
+              <p>Gestione dei Progetti di Business Excellence</p>
+              <p>Implementazione del sistema SAP in Produzione, Manutenzione, Qualità, Logistica e Pianificazione</p>
+            </div> 
           </div>
-          <div class="resumeListItemtxt">
-            <p><b>1998 - 2004 | ASSISTENTE BAGNANTI e ISTRUTTORE DI NUOTO</b></p>
-            <p>Tropos srl</p>
-          </div>
-          <div>
-            <p>Assistente Bagnanti</p>
-            <p>Istruttore di nuoto per bambini e adulti</p>
-          </div> 
         </div>
+
+        <div class="slides fade">
+          <div id="resume" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fa fa-swimmer" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>1998 - 2004 | ASSISTENTE BAGNANTI e ISTRUTTORE DI NUOTO</h4>
+              <p>Tropos srl</p>
+              <br>
+              <p>Assistente Bagnanti</p>
+              <p>Istruttore di nuoto per bambini e adulti</p>
+            </div>  
+          </div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div id="dots" class="dotpos">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+      </div> 
            
     </div>
   </section>
   <!--Fine Esperienza.-->
 
   <!--Portfolio-->
-  <section id="portfolio" class="sectioncontainer portfolio scroll">
+  <section id="portfolio" class="sectioncontainer temascuro scroll">
     <div id="portfoliotitolo" class="titolo">
       <h2>Portfolio</h2>
     </div>  
@@ -433,332 +522,119 @@
     <div id="linea" class="linea"></div>
     <div id="portfoliocontenuto" class="portfoliocontenuto">
       <div id="portfoliotxt" class="portfoliotxt">
-        
-        <div id="portfoliobox" class="portfoliobox">
-          <div class="portfoliocardtitle">
-            <div class="portfolioCardDescription">
-              <div class="icon fas fa-laptop-code"></div>
-              <div class="portfolioCardText">Sviluppo Web</div>
-            </div>
-            <div class="stelline">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fa fa-html5"></div>
-              <div class="skillCardText">HTML</div>
-            </div>
-          </div>  
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fa fa-css3"></div>
-              <div class="portfolioCardText">CSS</div>
-            </div>
-          </div>  
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-js"></div>
-              <div class="portfolioCardText">Javascript</div>
-            </div>
-          </div>       
-        </div>
-
-        <div id="portfoliobox" class="portfoliobox">
-          <div class="portfoliocardtitle">
-            <div class="portfolioCardDescription">
-              <div class="icon far fa-file-code"></div>
-              <div class="portfolioCardText">Coding</div>
-            </div>
-            <div class="stelline">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-python"></div>
-              <div class="portfolioCardText">Python</div>
-            </div>
-          </div>  
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-php"></div>
-              <div class="portfolioCardText">PHP</div>
-            </div>
-          </div>  
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fas fa-database"></div>
-              <div class="portfolioCardText">SQL</div>
-            </div>
-          </div>       
-        </div>
-
-        <div id="portfoliobox" class="portfoliobox">
-          <div class="portfoliocardtitle">
-            <div class="portfolioCardDescription">
-              <div class="icon fas fa-users"></div>
-              <div class="portfolioCardText">Social Media</div>
-            </div>
-            <div class="stelline">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-            </div>
-          </div>
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-linkedin"></div>
-              <div class="portfolioCardText">Linkedin</div>
-            </div>
-          </div>  
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-instagram-square"></div>
-              <div class="portfolioCardText">Instagram</div>
-            </div>
-          </div>  
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-facebook-square"></div>
-              <div class="portfolioCardText">Facebook</div>
-            </div>
-          </div>       
-        </div>
-
-        <div id="portfoliobox" class="portfoliobox">
-          <div class="portfoliocardtitle">
-            <div class="portfolioCardDescription">
-              <div class="icon fas fa-palette"></div>
-              <div class="portfolioCardText">Graphic</div>
-            </div>
-            <div class="stelline">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-linkedin"></div>
-              <div class="portfolioCardText">Lightroom</div>
-            </div>
-          </div>  
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-instagram-square"></div>
-              <div class="portfolioCardText">Inkscape</div>
-            </div>
-          </div>  
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-facebook-square"></div>
-              <div class="portfolioCardText">Photoshop</div>
-            </div>
-          </div>       
-        </div>
-
-        <div id="portfoliobox" class="portfoliobox">
-          <div class="portfoliocardtitle">
-            <div class="portfolioCardDescription">
-              <div class="icon fas fa-industry"></div>
-              <div class="portfolioCardText">Industry 4.0</div>
-            </div>
-            <div class="stelline">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-linkedin"></div>
-              <div class="portfolioCardText">IoT</div>
-            </div>
-          </div>  
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-instagram-square"></div>
-              <div class="portfolioCardText">AI</div>
-            </div>
-          </div>  
-          <div class="portfoliocard">
-            <div class="portfolioCardDescription">
-              <div class="icon fab fa-facebook-square"></div>
-              <div class="portfolioCardText">Photoshop</div>
-            </div>
-          </div>       
-        </div>
-
+        <p>Nel mio percorso professionale ho avuto l’opportunità di lavorare in luoghi ed ambiti diversi: grazie a queste esperienze ed ai colleghi che mi hanno aiutato a crescere, ho imparato che il segreto per raggiungere qualsiasi risultato è investire nel benessere e nella crescita delle Persone e creare un Ambiente di Lavoro che generi la passione per la propria mansione.</p>
       </div>
+    
+      <div id="portfoliocontainer" class="resumecontainer">
+
+        <div class="pslides fade">
+          <div id="portfolio" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-industry" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>PROBLEM SOLVING</h4>
+              <br>
+              <p>Six Sigma Green Belt Project: riduzione delle perdite di efficienza di due linee di imbottigliamento </p>
+              <p>Six Sigma Green Belt Project: riduzione dei difetti di produzione in una linea di imbottigliamento</p>
+              <p>Six Sigma Green Belt Project: ottimizzazione dell'indice di rotazione e della gestione scorte del magazzino ricambi</p>
+              <p>A3 project: riduzione delle microfermate di una confezionatrice</p>
+              <p>P-M Analysis: riduzione delle fermate non pianificate di una incartonatrice</p>
+              <p>Breakdown Analysis e X-Matrix per eliminazione dei guasti ricorrenti di linee di imbottigliamento</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pslides fade">
+          <div id="portfolio" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-cogs" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>LEAN MANUFACTURING</h4>
+              <br>
+              <p>SMED: riduzione tempi di cambio formato di un'etichettatrice</p>
+              <p>SMED: riduzione tempi di cambio formato di un'incartonatrice</p>
+              <p>SMED: riduzione tempi di cambio formato di una riempitrice</p>
+              <p>5S: implementazione su linee di produzione</p>
+              <p>Automanutenzione: piani di Pulizia, Ispezione e Lubrificazione per linee di produzione</p>
+              <p>Automanutenzione: formazione tecnica di base (Moduli Tecnici) per operatori di produzione</p>
+              <p>Automanutenzione: checklist di controllo macchina per operatori di produzione</p>
+              <p>Sicurezza: applicazione del LOTO (Lock-out/Tag-out)</p>
+              <p>Qualità: QA-Matrix e standard di controllo dei punti critici di processo</p>
+              <p>Manutenzione: ottimizzazione dei piani di manutenzione</p>
+              <p>Manutenzione: ottimizzazione del calendario delle manutenzioni tramite Maintenance Plotter</p>
+              <p>Manutenzione: Zero Based Budget</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pslides fade">
+          <div id="portfolio" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-tachometer-alt" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>GESTIONE INVESTIMENTI</h4>
+              <br>
+              <p>Progettazione, installazione ed avviamento di 3 nuove linee di imbottigliamento (acqua in PET e lattine)</p>
+              <p>Impianto di Cogenerazione ad alto rendimento</p>
+              <p>Impianto biologico di depurazione e trattamento acque a membrane</p>
+              <p>Centrale termica con impianto a GNL</p>
+              <p>Centrale di produzione aria compressa ad alta pressione (40bar)</p>
+            </div> 
+          </div>
+        </div>
+
+        <div class="pslides fade">
+          <div id="portfolio" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-cogs" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>GESTIONE PROGETTI</h4>
+              <br>
+              <p>SAP: mappatura dei processi industriali ed implementazione del sistema</p>
+              <p>Aumento dell'efficienza energetica dei motori elettrici</p>
+              <p>Ottimizzazione di una centrale di produzione aria compressa tramite SCADA</p>
+              <p>Certificazione ISO 22000: progetto ed implementazione del sistema di gestione della Sicurezza Alimentare</p>
+            </div> 
+          </div>
+        </div>
+
+        <div class="pslides fade">
+          <div id="portfolio" class="resume">
+            <div class="resumeListItemIcon">
+              <div class="icon fas fa-industry" style="color: #F8E028;"></div>
+            </div>
+            <div class="resumeListItemtxt">
+              <h4>SVILUPPO WEB</h4>
+              <br>
+              <p>Sito personale</p>
+            </div>
+          </div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
       
-      <div id="portfoliostxthard" class="portfoliostxt">
-        <h4>PORTFOLIO</h4>
-        
-        <div id="portfoliobox" class="portfoliobox">
-        <div class="portfoliocard">
-          <div class="portfolioCardDescription">
-            <div class="icon fa fa-html5" style="font-size: 50px;"></div>
-            <div class="portfolioCardText">HTML 5</div>
-          </div>
-          <div class="stelline">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </div>
-        </div>
-
-        <div class="portfoliocard">
-          <div class="portfolioCardDescription">
-            <div class="icon fa fa-css3" style="font-size: 50px;"></div>
-            <div class="portfolioCardText">CSS</div>
-          </div>
-          <div class="stelline">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </div>
-        </div>
-
-        <div class="portfoliocard">
-          <div class="portfolioCardDescription">
-            <div class="icon fab fa-js" style="font-size: 50px;"></div>
-            <div class="portfolioCardText">Javascript</div>
-          </div>
-          <div class="stelline">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </div>
-        </div>
-
-        <div class="portfoliocard">
-          <div class="portfolioCardDescription">
-            <div class="icon fab fa-python" style="font-size: 50px;"></div>
-            <div class="portfolioCardText">Python</div>
-          </div>
-          <div class="stelline">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </div>
-        </div>
-
-        <div class="portfoliocard">
-          <div class="portfolioCardDescription">
-            <div class="fas fa-drafting-compass" style="font-size: 50px;"></div>
-            <div class="portfolioCardText">Autocad</div>
-          </div>
-          <div class="stelline">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </div>
-        </div>
-
-        <div class="portfoliocard">
-          <div class="portfolioCardDescription">
-            <div class="icon fas fa-signal" style="font-size: 50px;">&#127470 &#127481</div>
-            <div class="portfolioCardText">&#127470</div>
-          </div>
-          <div class="stelline">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </div>
-        </div>
-
-        <div class="portfoliocard">
-          <div class="portfolioCardDescription">
-            <div class="icon fa fa-google" style="font-size: 50px;"></div>
-            <div class="portfolioCardText">G Suite</div>
-          </div>
-          <div class="stelline">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </div>
-        </div>
-
-        <div class="portfoliocard">
-          <div class="portfolioCardDescription">
-            <div class="icon fab fa-microsoft" style="font-size: 50px;"></div>
-            <div class="portfolioCardText">MS Office</div>
-          </div>
-          <div class="stelline">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </div>
-        </div>
-
-        <div class="portfoliocard">
-          <div class="portfolioCardDescription">
-            <div class="icon fab fa-apple" style="font-size: 50px;"></div>
-            <div class="portfolioCardText">Mac OS</div>
-          </div>
-          <div class="stelline">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </div>
-        </div>
-
-        <div class="portfoliocard">
-          <div class="portfolioCardDescription">
-            <div class="icon far fa-thumbs-up" style="font-size: 50px;"></div>
-            <div class="portfolioCardText">Social</div>
-          </div>
-          <div class="stelline">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </div>
-        </div>
-
-        </div>
-      </div>
+      <!-- The dots/circles -->
+      <div id="dots" class="dotpos">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>    
             
     </div>
   </section>
   <!--Fine Portfolio-->
 
   <!--Contatti-->
-  <section id="contatti" class="sectioncontainer contatti scroll">
+  <section id="contatti" class="sectioncontainer temachiaro scroll">
     <div id="contattititolo" class="titolo">
       <h2>Contatti</h2>
     </div>  
