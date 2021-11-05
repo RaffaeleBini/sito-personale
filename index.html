@@ -89,37 +89,7 @@
         dots[slideIndex-1].className += " active";
       }
       </script>
-
-      <script>
-        var pslideIndex = 1;
-        pshowSlides(pslideIndex);
-
-        function pplusSlides(n) {
-          pshowSlides(pslideIndex += n);
-        }
-
-        function pcurrentSlide(n) {
-          pshowSlides(pslideIndex = n);
-        }
-
-        function pshowSlides(n) {
-          var i;
-          var pslides = document.getElementsByClassName("pslides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > pslides.length) {pslideIndex = 1}    
-          if (n < 1) {pslideIndex = pslides.length}
-          for (i = 0; i < pslides.length; i++) {
-              pslides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          pslides[pslideIndex-1].style.display = "block";  
-          dots[pslideIndex-1].className += " active";
-        }
-        </script>
-
-    
+   
   </head>
 
   <!--Creo il body come contenitore di tutte le sezioni del sito -->
@@ -522,112 +492,103 @@
     <div id="linea" class="linea"></div>
     <div id="portfoliocontenuto" class="portfoliocontenuto">
       <div id="portfoliotxt" class="portfoliotxt">
-        <p>Nel mio percorso professionale ho avuto l’opportunità di lavorare in luoghi ed ambiti diversi: grazie a queste esperienze ed ai colleghi che mi hanno aiutato a crescere, ho imparato che il segreto per raggiungere qualsiasi risultato è investire nel benessere e nella crescita delle Persone e creare un Ambiente di Lavoro che generi la passione per la propria mansione.</p>
+        <p></p>
       </div>
     
-      <div id="portfoliocontainer" class="resumecontainer">
+      <div id="portfoliocontainer" class="portfoliocontainer">
 
-        <div class="pslides fade">
-          <div id="portfolio" class="resume">
-            <div class="resumeListItemIcon">
+        
+          <div id="portfolio" class="portfolio">
+            <div class="portfolioListItemIcon">
               <div class="icon fas fa-industry" style="color: #F8E028;"></div>
             </div>
-            <div class="resumeListItemtxt">
+            <div class="portfolioListItemtxt">
               <h4>PROBLEM SOLVING</h4>
               <br>
-              <p>Six Sigma Green Belt Project: riduzione delle perdite di efficienza di due linee di imbottigliamento </p>
-              <p>Six Sigma Green Belt Project: riduzione dei difetti di produzione in una linea di imbottigliamento</p>
-              <p>Six Sigma Green Belt Project: ottimizzazione dell'indice di rotazione e della gestione scorte del magazzino ricambi</p>
-              <p>A3 project: riduzione delle microfermate di una confezionatrice</p>
-              <p>P-M Analysis: riduzione delle fermate non pianificate di una incartonatrice</p>
-              <p>Breakdown Analysis e X-Matrix per eliminazione dei guasti ricorrenti di linee di imbottigliamento</p>
+              <ul>
+                <li><b>Six Sigma Green Belt Project</b>: riduzione delle perdite di efficienza di due linee di imbottigliamento </li>
+                <li><b>Six Sigma Green Belt Project</b>: riduzione dei difetti di produzione in una linea di imbottigliamento</li>
+                <li><b>Six Sigma Green Belt Project</b>: ottimizzazione dell'indice di rotazione e della gestione scorte del magazzino ricambi</li>
+                <li><b>A3 project</b>: riduzione delle microfermate di una confezionatrice</li>
+                <li><b>P-M Analysis</b>: riduzione delle fermate non pianificate di una incartonatrice</li>
+                <li><b>Breakdown Analysis</b> e X-Matrix per eliminazione dei guasti ricorrenti di linee di imbottigliamento</li>
+              </ul>
             </div>
           </div>
-        </div>
-
-        <div class="pslides fade">
-          <div id="portfolio" class="resume">
-            <div class="resumeListItemIcon">
+        
+          <div id="portfolio" class="portfolio">
+            <div class="portfolioListItemIcon">
               <div class="icon fas fa-cogs" style="color: #F8E028;"></div>
             </div>
-            <div class="resumeListItemtxt">
+            <div class="portfolioListItemtxt">
               <h4>LEAN MANUFACTURING</h4>
               <br>
-              <p>SMED: riduzione tempi di cambio formato di un'etichettatrice</p>
-              <p>SMED: riduzione tempi di cambio formato di un'incartonatrice</p>
-              <p>SMED: riduzione tempi di cambio formato di una riempitrice</p>
-              <p>5S: implementazione su linee di produzione</p>
-              <p>Automanutenzione: piani di Pulizia, Ispezione e Lubrificazione per linee di produzione</p>
-              <p>Automanutenzione: formazione tecnica di base (Moduli Tecnici) per operatori di produzione</p>
-              <p>Automanutenzione: checklist di controllo macchina per operatori di produzione</p>
-              <p>Sicurezza: applicazione del LOTO (Lock-out/Tag-out)</p>
-              <p>Qualità: QA-Matrix e standard di controllo dei punti critici di processo</p>
-              <p>Manutenzione: ottimizzazione dei piani di manutenzione</p>
-              <p>Manutenzione: ottimizzazione del calendario delle manutenzioni tramite Maintenance Plotter</p>
-              <p>Manutenzione: Zero Based Budget</p>
+              <ul>
+                <li><b>SMED</b>: riduzione tempi di cambio formato di un'etichettatrice</li>
+                <li><b>SMED</b>: riduzione tempi di cambio formato di un'incartonatrice</li>
+                <li><b>SMED</b>: riduzione tempi di cambio formato di una riempitrice</li>
+                <li><b>5S</b>: implementazione su linee di produzione</li>
+                <li><b>Automanutenzione</b>: piani di Pulizia, Ispezione e Lubrificazione per linee di produzione</li>
+                <li><b>Automanutenzione</b>: formazione tecnica di base (Moduli Tecnici) per operatori di produzione</li>
+                <li><b>Automanutenzione</b>: checklist di controllo macchina per operatori di produzione</li>
+                <li><b>Sicurezza</b>: applicazione del LOTO (Lock-out/Tag-out)</li>
+                <li><b>Qualità</b>: QA-Matrix e standard di controllo dei punti critici di processo</li>
+                <li><b>Manutenzione</b>: ottimizzazione dei piani di manutenzione</li>
+                <li><b>Manutenzione</b>: ottimizzazione del calendario delle manutenzioni tramite Maintenance Plotter</li>
+                <li><b>Manutenzione</b>: Zero Based Budget</li>
+            </ul>
             </div>
           </div>
-        </div>
 
-        <div class="pslides fade">
-          <div id="portfolio" class="resume">
-            <div class="resumeListItemIcon">
+          <div id="portfolio" class="portfolio">
+            <div class="portfolioListItemIcon">
               <div class="icon fas fa-tachometer-alt" style="color: #F8E028;"></div>
             </div>
-            <div class="resumeListItemtxt">
+            <div class="portfolioListItemtxt">
               <h4>GESTIONE INVESTIMENTI</h4>
               <br>
-              <p>Progettazione, installazione ed avviamento di 3 nuove linee di imbottigliamento (acqua in PET e lattine)</p>
-              <p>Impianto di Cogenerazione ad alto rendimento</p>
-              <p>Impianto biologico di depurazione e trattamento acque a membrane</p>
-              <p>Centrale termica con impianto a GNL</p>
-              <p>Centrale di produzione aria compressa ad alta pressione (40bar)</p>
+              <ul>
+                <li>Progettazione, installazione ed avviamento di 3 nuove <b>linee di imbottigliamento</b> (acqua in PET e lattine)</li>
+                <li>Impianto di <b>Cogenerazione</b> ad alto rendimento</li>
+                <li><b>Impianto biologico di depurazione</b> e trattamento acque a membrane</li>
+                <li><b>Centrale termica</b> con impianto a GNL</li>
+                <li>Centrale di produzione <b>aria compressa</b> ad alta pressione (40bar)</li>
+              </ul>
             </div> 
           </div>
-        </div>
-
-        <div class="pslides fade">
-          <div id="portfolio" class="resume">
-            <div class="resumeListItemIcon">
+       
+          <div id="portfolio" class="portfolio">
+            <div class="portfolioListItemIcon">
               <div class="icon fas fa-cogs" style="color: #F8E028;"></div>
             </div>
-            <div class="resumeListItemtxt">
+            <div class="portfolioListItemtxt">
               <h4>GESTIONE PROGETTI</h4>
               <br>
-              <p>SAP: mappatura dei processi industriali ed implementazione del sistema</p>
-              <p>Aumento dell'efficienza energetica dei motori elettrici</p>
-              <p>Ottimizzazione di una centrale di produzione aria compressa tramite SCADA</p>
-              <p>Certificazione ISO 22000: progetto ed implementazione del sistema di gestione della Sicurezza Alimentare</p>
+              <ul>
+              <li><b>SAP</b>: mappatura dei processi industriali ed implementazione del sistema</li>
+              <li>Aumento dell'<b>efficienza energetica</b> dei motori elettrici</li>
+              <li>Ottimizzazione di una centrale di produzione aria compressa tramite <b>SCADA</b></li>
+              <li><b>Certificazione ISO 22000</b>: progetto ed implementazione del sistema di gestione della Sicurezza Alimentare</li>
+              <li><b>Riduzione consumi di acqua</b> mediante lubrificazione a secco</li>
+              </ul>
             </div> 
           </div>
-        </div>
 
-        <div class="pslides fade">
-          <div id="portfolio" class="resume">
-            <div class="resumeListItemIcon">
+          <div id="portfolio" class="portfolio">
+            <div class="portfolioListItemIcon">
               <div class="icon fas fa-industry" style="color: #F8E028;"></div>
             </div>
-            <div class="resumeListItemtxt">
+            <div class="portfolioListItemtxt">
               <h4>SVILUPPO WEB</h4>
               <br>
-              <p>Sito personale</p>
+              <ul>
+                <li><b>HTML, CSS, Javascript</b>: Sito personale</li>
+              </ul>
             </div>
           </div>
-        </div>
-        
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
       </div>
-      <br>
-      
-      <!-- The dots/circles -->
-      <div id="dots" class="dotpos">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-      </div>    
+       
             
     </div>
   </section>
