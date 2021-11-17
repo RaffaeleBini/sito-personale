@@ -755,23 +755,23 @@
 
 /* Imposto le regole di responsive design */
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
+/*@media only screen and (max-width: 400px) {
   body {
-   /* background-color: #F09A9D; /* Red */
+   background-color: #F09A9D; 
   }
-}
+}*/
 
 /* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
+/*@media only screen and (min-width: 401px) and (max-width: 960px) {
   body {
-   /* background-color: #F5CF8E; /* Yellow */
+   background-color: #F5CF8E; 
   }
-}
+}*/
 
 /* Desktop Styles */
-@media only screen and (min-width: 961px) {
+/*@media only screen and (min-width: 961px) {
   body {
-   /* background-color: white; /* White */
+   /* background-color: white;
   }
-}
+}*/
 
