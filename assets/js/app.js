@@ -10,8 +10,8 @@ function typeWriter() {
     }
 
 $(function() {
-$(".preloader").delay(3000).fadeOut("slow");
-$("#overlayer").delay(3000).fadeOut("slow");
+$(".preloader").delay(2500).fadeOut("slow");
+$("#overlayer").delay(2500).fadeOut("slow");
 })
 
 $(function() {
