@@ -653,27 +653,46 @@
 
 /* Imposto le regole di responsive design */
 /* Mobile Styles */
-@media only screen and (max-width: 480px) {
+@media (max-width: 600px) {
   .body {
-    font-size: 12px; 
+    font-size: 12px;
+  }
+
+  .titolo {
+    width: 90%;
+  }
+
+  .sectioncontainer {
+    overflow: scroll;
   }
 
   .sudimecontenuto, .formazionecontenuto, .portfoliocontainer, .contatticontenuto {
     flex-direction: column;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
+    overflow: scroll;
+  }
+
+  .formazionetxt {
+    width: 90%;
+    flex: 1 1 30%;
+  }
+
+  .resumeListItemtxt {
+    width: 70vw;
+    height: 50vh;
   }
 
   .portfolio {
     width: 100%; 
   }
-}
 
-/* Tablet Styles */
-@media only screen and (min-width: 481px) and (max-width: 960px) {
-  .body {
-    font-size: 14px; 
+  .home {
+    width: 100%;
+    background-color: lightcoral; 
   }
 }
+
+
 
 
 
