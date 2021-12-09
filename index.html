@@ -16,6 +16,7 @@
   <link rel="alternate" href="/en/" hreflang="en" />
   <link rel="alternate" href="/es/" hreflang="es" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
   <title>Raffaele Bini</title>
 
 </head>
@@ -448,7 +449,7 @@
 
         <div id="portfolio" class="portfolio">
           <div class="portfolioListItemIcon">
-            <div class="icon fas fa-industry" style="color: #F8E028;"></div>
+            <div class="icon fas fa-thumbs-up" style="color: #F8E028;"></div>
           </div>
           <div class="portfolioListItemtxt">
             <h4>PROBLEM SOLVING</h4>
@@ -468,7 +469,7 @@
 
         <div id="portfolio" class="portfolio">
           <div class="portfolioListItemIcon">
-            <div class="icon fas fa-cogs" style="color: #F8E028;"></div>
+            <div class="icon fas fa-tachometer-alt" style="color: #F8E028;"></div>
           </div>
           <div class="portfolioListItemtxt">
             <h4>LEAN MANUFACTURING</h4>
@@ -489,7 +490,7 @@
 
         <div id="portfolio" class="portfolio">
           <div class="portfolioListItemIcon">
-            <div class="icon fas fa-tachometer-alt" style="color: #F8E028;"></div>
+            <div class="icon fas fa-industry" style="color: #F8E028;"></div>
           </div>
           <div class="portfolioListItemtxt">
             <h4>GESTIONE INVESTIMENTI</h4>
@@ -507,7 +508,7 @@
 
         <div id="portfolio" class="portfolio">
           <div class="portfolioListItemIcon">
-            <div class="icon fas fa-cogs" style="color: #F8E028;"></div>
+            <div class="icon fas fa-tasks" style="color: #F8E028;"></div>
           </div>
           <div class="portfolioListItemtxt">
             <h4>GESTIONE PROGETTI</h4>
@@ -528,7 +529,7 @@
 
         <div id="portfolio" class="portfolio">
           <div class="portfolioListItemIcon">
-            <div class="icon fas fa-industry" style="color: #F8E028;"></div>
+            <div class="icon fas fa-file-code" style="color: #F8E028;"></div>
           </div>
           <div class="portfolioListItemtxt">
             <h4>SVILUPPO WEB</h4>
@@ -565,7 +566,6 @@
             <br>
             <img src="assets/img/foto.jpg" style="opacity: 0,6;">
             <br>
-            <p>Mail to info@raffaelebini.com</p>
           </div>
           <div id="contattisocial" class="contattisocial">
             <ul id="socialicons" class="socialicons">
@@ -580,14 +580,16 @@
         </div>
       </div>
       <div id="contattidx" class="contatticolonna">
-        <form id="form" action="" method="get">
+        <!-- <form id="contact-form" action="" method="get"> -->
+        <form id="contact-form">
+          <input type="hidden" name="contact_number">
           <label class="form-label" for="nome">Nome:</label><br>
-          <input type="text" id="nome" name="nome" value=""><br><br>
+          <input type="text" id="nome" name="user_name" value=""><br><br>
           <label class="form-label" for="email">Indirizzo e-mail:</label><br>
-          <input type="email" id="email" name="email" placeholder=""><br><br>
+          <input type="email" id="email" name="user_email" placeholder=""><br><br>
           <label class="form-label" for="messaggio">Messaggio:</label><br>
-          <textarea name="messaggio" style="width:400px; height:250px;">Scrivi qui il tuo messaggio.</textarea><br>
-          <button id="form-button" class="form-button">Submit</button>
+          <textarea name="message" style="width:400px; height:250px;">Scrivi qui il tuo messaggio.</textarea><br>
+          <input id="form-button" class="form-button" type="submit" value="Invia">
         </form>
       </div>
     </div>
@@ -607,6 +609,7 @@
     integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
     crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 </body>
 
