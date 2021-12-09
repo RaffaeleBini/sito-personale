@@ -10,8 +10,8 @@ function typeWriter() {
     }
 
 $(function() {
-$(".preloader").delay(2500).fadeOut("slow");
-$("#overlayer").delay(2500).fadeOut("slow");
+$(".preloader").delay(3000).fadeOut("slow");
+$("#overlayer").delay(3000).fadeOut("slow");
 })
 
 $(function() {
@@ -53,4 +53,24 @@ var slideIndex = 1;
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
+}
+
+//form per emailjs
+(function() {
+    emailjs.init("user_cRZ91pT8SqzcEW6qbihS7");
+    })();
+
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm('contact_service', 'contact_form', this)
+            .then(function() {
+                console.log('SUCCESS!');
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    });
 }
