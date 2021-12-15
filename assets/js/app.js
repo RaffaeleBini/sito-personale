@@ -56,9 +56,9 @@ var slideIndex = 1;
 }
 
 //form per emailjs
-(function() {
-    emailjs.init("user_cRZ91pT8SqzcEW6qbihS7");
-    })();
+//(function() {
+ //   emailjs.init("user_cRZ91pT8SqzcEW6qbihS7");
+  //  })();
 
 window.onload = function() {
     document.getElementById('contact_form').addEventListener('submit', function(event) {
